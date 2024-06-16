@@ -94,7 +94,7 @@ export function Galaxy(props) {
             transparent
             depthWrite={false}
             vertexColors
-            opacity={0.6}
+            opacity={0.4}
             depthTest
             size={0.06}
           />
