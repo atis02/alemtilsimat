@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  /* background-color: #000; */
+  /* background-color: #04101c; */
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(/Montserrat-VariableFont_wght.ttf);
+}
+::selection{
+  background-color:rgba(0,224,255,1);
+  color: #04101c;
+}
+::-webkit-scrollbar-thumb {
+  background:rgba(0,224,255,1);
+  border-radius: 7px;
+
+}
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #04101c;
+}
+
+.main-title{
+  /* /* background: linear-gradient(to right,30%  #FFFFFF,60% #00E0FF ) ; */
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,224,255,1) 100%);
+  background-clip:text;
+  -webkit-text-fill-color: transparent; 
+}
+.nav-link{
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  height: 34px;
+  align-items: center;
+  
+}
+.nav-link2{
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  height: 34px;
+  align-items: center;
+  padding-left: 10px;
+}
+.active{
+  color: #0cfefc;
+  border-bottom: 1.5px solid #0cfefc ;
+  transition: all ease 0.4s;
+}
+
