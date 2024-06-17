@@ -10,15 +10,8 @@ import { Galaxy } from "../../Components/Canvas/Globe";
 import EastIcon from "@mui/icons-material/East";
 
 const Home = () => {
-  // useEffect(() => {
-  //   if (!document.getElementById("globe-canvas")) {
-  //     const container = document.querySelector("#scene-container");
-  //     const world = new World(container, undefined, globeConfig);
-  //     world.start();
-  //   }
-  // }, []);
   return (
-    <Box minHeight="97.5vh" borderBottom="1px solid gray">
+    <Box minHeight="98vh" borderBottom="1px solid gray">
       <Stack
         sx={{
           position: "absolute",
@@ -27,12 +20,12 @@ const Home = () => {
           pr: { lg: "50px", md: "40px", sm: "30px", xs: "20px" },
           pl: { lg: "50px", md: "40px", sm: "30px", xs: "20px" },
           justifyContent: "space-between",
+          alignItems: "center",
           width: "100%",
         }}
         direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
       >
         <Stack
-          // height="91.45vh"
           alignItems="center"
           direction="row"
           justifyContent="space-between"
@@ -121,16 +114,7 @@ const Home = () => {
             </Stack>
           </Stack>
         </Stack>
-        {/* <Stack
-        id="scene-container"
-        sx={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      ></Stack> */}
+
         <EarthCanvas />
         {/* <Galaxy /> */}
       </Stack>

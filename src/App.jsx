@@ -10,6 +10,8 @@ import { Galaxy } from "./Components/Canvas/Globe";
 import About from "./Pages/About/About";
 import MainLayout from "./Components/Layout/MainLayout";
 import Footer from "./Pages/Footer/Footer";
+import Demo from "./Pages/Demo/Demo";
+import Contacts from "./Pages/Contacts/Contacts";
 
 function App() {
   const [loader, setLoader] = useState(false);
@@ -31,12 +33,14 @@ function App() {
       ) : ( */}
       <Box sx={{ backgroundColor: "#04101c", minHeight: "100vh" }}>
         {/* <StarsCanvas /> */}
-        <Galaxy />
+        {/* <Galaxy /> */}
 
         <BrowserRouter>
           <Navbar />
           <Routes>
             <Route path="/" element={<MainLayout />} />
+            <Route path="/demo" element={<Demo />} />
+            <Route path="/contacts" element={<Contacts />} />
           </Routes>
           <Footer />
         </BrowserRouter>

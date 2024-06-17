@@ -56,7 +56,7 @@ const About = () => {
           </Typography>
           <Typography
             color="#DDDDDDDD"
-            fontSize={18}
+            fontSize={{ lg: 18, md: 18, sm: 16, xs: 15 }}
             lineHeight="27px"
             fontFamily="Montserrat"
             fontWeight={400}

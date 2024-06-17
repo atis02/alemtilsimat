@@ -44,7 +44,12 @@ const AutoDatabase = () => {
       <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
         <Stack
           position="absolute"
-          height={{ lg: 530, md: 470, sm: 450, xs: 350 }}
+          height={{
+            lg: 530,
+            md: 470,
+            sm: 450,
+            xs: 370,
+          }}
           width={{ lg: 420, md: 430, sm: 340, xs: "90%" }}
         >
           <img
@@ -54,7 +59,7 @@ const AutoDatabase = () => {
           />
           <Stack
             position="absolute"
-            height={{ lg: 530, md: 470, sm: 460, xs: 320 }}
+            height={{ lg: 530, md: 470, sm: 460, xs: 335 }}
             width={{ lg: 420, md: 430, sm: 340, xs: "90%" }}
             mt={2}
             ml={2}
@@ -67,7 +72,7 @@ const AutoDatabase = () => {
           </Stack>
         </Stack>
         <Stack
-          width={{ lg: "100%", md: "100%", sm: "90%", xs: "95%" }}
+          width={{ lg: "100%", md: "100%", sm: "90%", xs: "90%" }}
           height="450px"
           p={{ lg: "30px", md: "20px", sm: "20px", xs: "30px" }}
         >
@@ -168,7 +173,7 @@ const AutoDatabase = () => {
           <Stack alignItems="center">
             <Typography
               color="#DDDDDDDD"
-              fontSize={18}
+              fontSize={{ lg: 18, md: 18, sm: 16, xs: 15 }}
               lineHeight="27px"
               fontFamily="Montserrat"
               width={{ lg: "61%", md: "60%", sm: "100%", xs: "100%" }}

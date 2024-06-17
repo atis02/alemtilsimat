@@ -41,7 +41,7 @@ const Navbar = () => {
   }, []);
   return (
     <Box
-      position="fixed"
+      position="sticky"
       top="0"
       width="100%"
       zIndex="1000"
@@ -174,7 +174,11 @@ const Navbar = () => {
             <Stack direction="column" alignItems="center" spacing={2}>
               {navlinks.map((elem, index) => (
                 <Stack key={index}>
-                  <NavLink className="nav-link" to={elem.link}>
+                  <NavLink
+                    className="nav-link"
+                    onClick={() => setMobileMenuOpen(false)}
+                    to={elem.link}
+                  >
                     {elem.title}
                   </NavLink>
                 </Stack>

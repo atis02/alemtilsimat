@@ -53,7 +53,7 @@ const EarthCanvas = () => {
     };
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    const mediaQueryTablet = window.matchMedia("(max-width: 768px)");
+    const mediaQueryTablet = window.matchMedia("(max-width: 900px)");
     setIsTablet(mediaQueryTablet.matches);
     const handleMediaQueryChangeTablet = (event) => {
       setIsTablet(event.matches);

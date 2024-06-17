@@ -143,7 +143,7 @@ const HealthCare = () => {
           <Stack alignItems="center">
             <Typography
               color="#DDDDDDDD"
-              fontSize={18}
+              fontSize={{ lg: 18, md: 18, sm: 16, xs: 15 }}
               lineHeight="27px"
               fontFamily="Montserrat"
               width={{ lg: "60%", md: "60%", sm: "100%", xs: "100%" }}

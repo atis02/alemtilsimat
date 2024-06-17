@@ -167,13 +167,7 @@ const Footer = () => {
         p="8px 0"
         backgroundColor="#112334"
       >
-        Copyright © {new Date().getFullYear()} Älem Tilsimat | Powered by{" "}
-        <a
-          href="https://alemtilsimat.com/"
-          style={{ textDecoration: "none", color: "#0cfefc" }}
-        >
-          Älem Tilsimat
-        </a>
+        Copyright © {new Date().getFullYear()} Älem Tilsimat
       </Typography>
     </>
   );

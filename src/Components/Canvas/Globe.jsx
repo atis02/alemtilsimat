@@ -37,12 +37,6 @@ export function Galaxy(props) {
       const distanceToCenter = getDistanceToCenter(x, y, z);
       const normalizedDistanceToCenter = distanceToCenter / 100;
 
-      // make colors closer to 0,0,0 be more reddish and colors further away be more blueish (do not use hsl)
-      // color.setHSL(
-      //   (0.15 * (0.21 + Math.cos(distanceToCenter * 0.02))) / 2,
-      //   0.75,
-      //   0.6
-      // )
       color.setRGB(
         Math.cos(normalizedDistanceToCenter),
         THREE.MathUtils.randFloat(0, 0.8),
@@ -61,24 +55,8 @@ export function Galaxy(props) {
   const MyGalaxy = () => {
     let rotationAngle = 0;
     useFrame(({ clock }) => {
-      // ref.current.rotation.z = clock.getElapsedTime() / 10;
-      // console.log(state.clock.getElapsedTime());
-      // let theta = 0;
-      // let phi = 0;
-      // const spiralSpeed = 0.01;
-      // const spiralRadius = 1;
+      rotationAngle += 0.0005; // Adjust this value for desired rotation speed
 
-      // theta += 0.01;
-      // phi += spiralSpeed;
-
-      // const x = Math.cos(phi) * spiralRadius;
-      // const z = Math.sin(phi) * spiralRadius;
-
-      // ref.current.rotation.y = theta;
-      // ref.current.position.set(x, 0, z);
-      rotationAngle += 0.005; // Adjust this value for desired rotation speed
-
-      // Update object's rotation on Z-axis
       ref.current.rotation.z = rotationAngle;
     });
     return (
@@ -86,22 +64,22 @@ export function Galaxy(props) {
         <pointLight
           position={[0, 0, 0]}
           ref={galaxyCenterLightRef}
-          intensity={1}
+          intensity={0.3}
         />
-        <Points scale={0.06} positions={positions} colors={colors}>
+        <Points scale={0.04} positions={positions} colors={colors}>
           <pointsMaterial
             map={starTexture}
             transparent
             depthWrite={false}
             vertexColors
-            opacity={0.6}
+            opacity={0.4}
             depthTest
-            size={0.06}
+            size={0.001}
           />
         </Points>
         <EffectComposer autoClear={false}>
           <SelectiveBloom
-            intensity={2}
+            intensity={0.5}
             luminanceThreshold={0.001}
             luminanceSmoothing={0.225}
             lights={[galaxyCenterLightRef]}
@@ -122,9 +100,9 @@ export function Galaxy(props) {
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             autoRotate
-            enableZoom={true}
-            // maxPolarAngle={Math.PI / 2}
-            // minPolarAngle={Math.PI / 2}
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
           />
           <MyGalaxy />
         </Suspense>
