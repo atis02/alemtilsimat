@@ -119,8 +119,8 @@ const Home = () => {
           </Stack>
         </Stack>
 
-        {/* <EarthCanvas /> */}
-        <Galaxy />
+        <EarthCanvas />
+        {/* <Galaxy /> */}
       </Stack>
     </Box>
   );

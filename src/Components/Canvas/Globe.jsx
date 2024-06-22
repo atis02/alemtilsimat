@@ -66,13 +66,13 @@ export function Galaxy(props) {
           ref={galaxyCenterLightRef}
           intensity={0.3}
         />
-        <Points scale={0.04} positions={positions} colors={colors}>
+        <Points scale={0.02} positions={positions} colors={colors}>
           <pointsMaterial
             map={starTexture}
             transparent
             depthWrite={false}
             vertexColors
-            opacity={0.4}
+            opacity={0.3}
             depthTest
             size={0.001}
           />
