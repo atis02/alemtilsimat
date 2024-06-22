@@ -12,6 +12,8 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { navlinks } from "./components/navlinks.mjs";
 import MenuIcon from "@mui/icons-material/Menu";
+import Language from "../Language/Language";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,6 +23,7 @@ const Navbar = () => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const { t } = useTranslation();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -65,13 +68,28 @@ const Navbar = () => {
           ...(isMobile ? { display: "none" } : { display: "flex" }),
         }}
       >
-        {navlinks.map((elem, index) => (
-          <Stack key={index}>
-            <NavLink className="nav-link" to={elem.link}>
-              {elem.title}
-            </NavLink>
-          </Stack>
-        ))}
+        <NavLink
+          onClick={() => setMobileMenuOpen(false)}
+          className="nav-link"
+          to="/"
+        >
+          {t("home")}
+        </NavLink>
+        <NavLink
+          onClick={() => setMobileMenuOpen(false)}
+          className="nav-link"
+          to="/demo"
+        >
+          {t("demo")}
+        </NavLink>
+        <NavLink
+          onClick={() => setMobileMenuOpen(false)}
+          className="nav-link"
+          to="/contacts"
+        >
+          {t("contact")}
+        </NavLink>
+        <Language />
       </Stack>
       <Stack
         direction="row"
@@ -138,7 +156,8 @@ const Navbar = () => {
         sx={{
           "& .MuiDrawer-paper": {
             width: "100%",
-            background: " #04101c",
+            background: " transparent",
+            backdropFilter: " blur(5px)",
           },
         }}
       >
@@ -171,18 +190,29 @@ const Navbar = () => {
                 <path d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z"></path>
               </svg>
             </Button>
-            <Stack direction="column" alignItems="center" spacing={2}>
-              {navlinks.map((elem, index) => (
-                <Stack key={index}>
-                  <NavLink
-                    className="nav-link"
-                    onClick={() => setMobileMenuOpen(false)}
-                    to={elem.link}
-                  >
-                    {elem.title}
-                  </NavLink>
-                </Stack>
-              ))}
+            <Stack direction="column" alignItems="start" spacing={2}>
+              <NavLink
+                onClick={() => setMobileMenuOpen(false)}
+                className="nav-link"
+                to="/"
+              >
+                {t("home")}
+              </NavLink>
+              <NavLink
+                onClick={() => setMobileMenuOpen(false)}
+                className="nav-link"
+                to="/demo"
+              >
+                {t("demo")}
+              </NavLink>
+              <NavLink
+                onClick={() => setMobileMenuOpen(false)}
+                className="nav-link"
+                to="/contacts"
+              >
+                {t("contact")}
+              </NavLink>
+              <Language />
             </Stack>
           </Stack>
         </Box>

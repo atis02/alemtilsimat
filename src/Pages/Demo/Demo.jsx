@@ -1,6 +1,7 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { mobileData, websitesData } from "./components/data.mjs";
+import { mobileData, projects, websitesData } from "./components/data.mjs";
+import { useTranslation } from "react-i18next";
 
 const Demo = () => {
   const [website, setWebsite] = useState(0);
@@ -11,7 +12,7 @@ const Demo = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+  const { t } = useTranslation();
   return (
     <Box
       sx={{
@@ -71,11 +72,11 @@ const Demo = () => {
                 marginTop="20px"
                 textAlign="center"
               >
-                All Projects (20+)
+                {t("allProjects")} (20+)
               </Typography>
             </Stack>
             <Stack
-              direction="row"
+              direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
               mt="30px"
               ml={{ lg: 17, md: 13, sm: 0, xs: 0 }}
               justifyContent={{
@@ -89,7 +90,7 @@ const Demo = () => {
               <Button
                 sx={{
                   color: "#fff",
-                  fontSize: { lg: 40, md: 37, sm: 30, xs: 25 },
+                  fontSize: { lg: 40, md: 37, sm: 30, xs: 20 },
                   fontWeight: 700,
                   fontFamily: "Montserrat",
                   textTransform: "revert",
@@ -101,12 +102,12 @@ const Demo = () => {
                 }}
                 onClick={() => handleChange(0)}
               >
-                Web site
+                {t("projects")}
               </Button>
               <Button
                 sx={{
                   color: "#fff",
-                  fontSize: { lg: 40, md: 37, sm: 30, xs: 25 },
+                  fontSize: { lg: 40, md: 37, sm: 30, xs: 20 },
                   fontWeight: 700,
                   fontFamily: "Montserrat",
                   textTransform: "revert",
@@ -118,11 +119,62 @@ const Demo = () => {
                 }}
                 onClick={() => handleChange(1)}
               >
-                Application
+                {t("webSites")}
+              </Button>
+              <Button
+                sx={{
+                  color: "#fff",
+                  fontSize: { lg: 40, md: 37, sm: 30, xs: 20 },
+                  fontWeight: 700,
+                  fontFamily: "Montserrat",
+                  textTransform: "revert",
+                  ...(website == "2"
+                    ? { borderBottom: "3px solid #00E0FF " }
+                    : ""),
+                  "&:hover": { background: "transparent" },
+                  borderRadius: "0px",
+                  zIndex: 100,
+                }}
+                onClick={() => handleChange(2)}
+              >
+                {t("applications")}
               </Button>
             </Stack>
             <Stack>
               {website == "0" ? (
+                <Stack
+                  direction="row"
+                  justifyContent={{
+                    lg: "center",
+                    md: "center",
+                    sm: "center",
+                    xs: "space-evenly",
+                  }}
+                  alignItems="center"
+                  flexWrap="wrap"
+                  gap="40px"
+                  mt="30px"
+                  zIndex="100"
+                >
+                  {projects.map((elem) => (
+                    <Stack>
+                      <Stack
+                        maxWidth={{ lg: 350, md: 300, sm: 250, xs: 145 }}
+                        maxHeight={{ lg: 460, md: 410, sm: 360, xs: 250 }}
+                      >
+                        <img
+                          src={elem.img}
+                          style={{ width: "auto", height: "auto" }}
+                          alt={elem.title}
+                        />
+                      </Stack>
+                      <Typography mt="20px" textAlign="center" color="#fff">
+                        {elem.title}
+                      </Typography>
+                    </Stack>
+                  ))}
+                </Stack>
+              ) : website == "1" ? (
                 <Stack
                   direction="row"
                   justifyContent={{
@@ -155,7 +207,7 @@ const Demo = () => {
                     </Stack>
                   ))}
                 </Stack>
-              ) : website == "1" ? (
+              ) : website == "2" ? (
                 <Stack
                   direction="row"
                   justifyContent="center"

@@ -13,8 +13,8 @@ const MainLayout = () => {
       <StarsCanvas />
       <Home />
       <About />
-      <HealthCare />
       <Business />
+      <HealthCare />
       <AutoDatabase />
     </Box>
   );

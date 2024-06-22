@@ -1,7 +1,9 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <Box
       sx={{
@@ -26,14 +28,12 @@ const About = () => {
             alt=""
           />
           <Stack
-            width={{ lg: 590, md: 490, sm: 390, xs: 290 }}
-            height={{ lg: 475, md: 375, sm: 305, xs: 285 }}
+            width={{ lg: 600, md: 490, sm: 390, xs: 310 }}
+            height={{ lg: 555, md: 375, sm: 305, xs: 285 }}
             position="absolute"
-            mt={{ lg: "100px", md: "90px", sm: "70px", xs: "50px" }}
             zIndex={10}
-            ml={{ lg: 0, md: 0, sm: 0, xs: 3 }}
           >
-            <img src="/images/MainPageImages/About.png" alt="" />
+            <img src="/images/MainPageImages/about3.png" alt="" />
           </Stack>
         </Stack>
         <Stack>
@@ -49,41 +49,19 @@ const About = () => {
               xs: "36px",
             }}
             mb="20px"
-            // className="main-title"
             textAlign="center"
           >
-            О нас
+            {t("about")}
           </Typography>
           <Typography
             color="#DDDDDDDD"
-            fontSize={{ lg: 18, md: 18, sm: 16, xs: 15 }}
+            fontSize={{ lg: 18, md: 16, sm: 16, xs: 14 }}
             lineHeight="27px"
             fontFamily="Montserrat"
             fontWeight={400}
             textAlign="justify"
           >
-            Мы – ИТ компания, которая специализируется на программировании. Наша
-            команда состоит из опытных разработчиков, которые знают, как
-            создавать высококачественные программные продукты.
-            <br />
-            <br />
-            Мы привержены инновациям и всегда следим за последними тенденциями в
-            мире технологий. Мы стремимся к тому, чтобы наши решения были
-            передовыми и давали нашим клиентам конкурентное преимущество.
-            <br />
-            <br />
-            Наша цель – помочь нашим клиентам достигнуть своих бизнес-целей с
-            помощью современных и эффективных технологий. Мы понимаем, что
-            каждый проект уникален и требует индивидуального подхода, поэтому мы
-            работаем тесно с каждым клиентом, чтобы понять его потребности и
-            предоставить наиболее подходящее решение.
-            <br />
-            <br />
-            Мы гордимся своей работой и всегда стремимся к тому, чтобы наши
-            продукты были лучшими в своем классе. Если вы ищете надежного
-            партнера для создания программного обеспечения, то мы готовы помочь
-            вам воплотить ваши идеи в реальность.
-            <br />
+            <Trans i18nKey="aboutText" components={{ 1: <br /> }} />
           </Typography>
         </Stack>
       </Stack>

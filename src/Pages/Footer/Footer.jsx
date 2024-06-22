@@ -7,15 +7,23 @@ import {
   useTheme,
 } from "@mui/material";
 import React from "react";
-import { navlinks } from "../../Components/Navbar/components/navlinks.mjs";
 import { Link, NavLink } from "react-router-dom";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import LanguageIcon from "@mui/icons-material/Language";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const { t } = useTranslation();
+  const navlinks = [
+    { title: t("home"), link: "/" },
+    { title: t("demo"), link: "/demo" },
+    { title: t("contact"), link: "/contacts" },
+    { title: t("vacancy"), link: "/vacancy" },
+  ];
+
   return (
     <>
       <Box
@@ -26,7 +34,6 @@ const Footer = () => {
         <Stack
           direction="row"
           flexWrap="wrap"
-          alignItems="center"
           justifyContent="space-between"
           spacing={{ lg: "50px", md: 0, sm: 0, xs: 0 }}
         >
@@ -69,12 +76,11 @@ const Footer = () => {
                 fontSize={{ lg: 13, md: 12, sm: 12, xs: 11 }}
                 mt={{ lg: "20px", md: "20px", sm: "10px", xs: "10px" }}
               >
-                Cоздание и внедрение ИТ проектов любой сложности, разработка веб
-                сайтов и мобильных приложений
+                {t("homeTitle")}
               </Typography>
             </Stack>
           </Stack>
-          <Stack direction="column" pt={1} spacing="20px">
+          <Stack direction="column" spacing="15px">
             {navlinks.map((elem, index) => (
               <Stack key={index}>
                 <NavLink

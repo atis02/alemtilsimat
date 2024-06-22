@@ -8,10 +8,15 @@ import { slideIn } from "../../Utils/motion";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { Galaxy } from "../../Components/Canvas/Globe";
 import EastIcon from "@mui/icons-material/East";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const { t } = useTranslation();
   return (
-    <Box minHeight="98vh" borderBottom="1px solid gray">
+    <Box minHeight="87vh" borderBottom="1px solid gray">
       <Stack
         sx={{
           position: "absolute",
@@ -69,8 +74,7 @@ const Home = () => {
                 fontSize={{ lg: 20, md: 18, sm: 16, xs: 15 }}
                 mt={{ lg: "50px", md: "40px", sm: "30px", xs: "20px" }}
               >
-                Cоздание и внедрение ИТ проектов любой сложности, разработка веб
-                сайтов и мобильных приложений
+                {t("homeTitle")}
               </Typography>
               <Button
                 sx={{
@@ -107,7 +111,7 @@ const Home = () => {
                     "&:hover": { color: "#114896" },
                   }}
                 > */}{" "}
-                Explore our work
+                {t("explore")}
                 {/* </Typography> */}
                 <EastIcon />
               </Button>
@@ -115,8 +119,8 @@ const Home = () => {
           </Stack>
         </Stack>
 
-        <EarthCanvas />
-        {/* <Galaxy /> */}
+        {/* <EarthCanvas /> */}
+        <Galaxy />
       </Stack>
     </Box>
   );

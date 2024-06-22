@@ -1,15 +1,34 @@
 import React from "react";
 import { Box, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { database } from "./components/data.mjs";
 import { fadeIn } from "../../Utils/motion";
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
+import { useTranslation } from "react-i18next";
 
 const AutoDatabase = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery(theme.breakpoints.down("md"));
   const isMd = useMediaQuery(theme.breakpoints.down("lg"));
+  const { t } = useTranslation();
+
+  const database = [
+    {
+      img: "/images/MainPageImages/autoDatabase1.png",
+      title: t("databaseDescTitle"),
+      desc: t("databaseDesc"),
+    },
+    {
+      img: "/images/MainPageImages/autoDatabase2.png",
+      title: t("databaseDescTitle2"),
+      desc: t("databaseDesc2"),
+    },
+    {
+      img: "/images/MainPageImages/autoDatabase3.png",
+      title: t("databaseDescTitle3"),
+      desc: t("databaseDesc3"),
+    },
+  ];
 
   const Database = ({ index, title, img, desc }) => (
     <Tilt
@@ -17,10 +36,9 @@ const AutoDatabase = () => {
         ...(isMobile
           ? {
               width: "100%",
-              height: "440px",
+              height: "400px",
               ...(index == "1" ? { marginTop: "0px" } : ""),
               ...(index == "2" ? { marginTop: "0px" } : ""),
-              ...(index == "2" ? { height: "330px" } : ""),
             }
           : isTablet
           ? {
@@ -45,10 +63,10 @@ const AutoDatabase = () => {
         <Stack
           position="absolute"
           height={{
-            lg: 530,
+            lg: 450,
             md: 470,
             sm: 450,
-            xs: 370,
+            xs: 320,
           }}
           width={{ lg: 420, md: 430, sm: 340, xs: "90%" }}
         >
@@ -59,7 +77,7 @@ const AutoDatabase = () => {
           />
           <Stack
             position="absolute"
-            height={{ lg: 530, md: 470, sm: 460, xs: 335 }}
+            height={{ lg: 450, md: 470, sm: 460, xs: 285 }}
             width={{ lg: 420, md: 430, sm: 340, xs: "90%" }}
             mt={2}
             ml={2}
@@ -74,7 +92,12 @@ const AutoDatabase = () => {
         <Stack
           width={{ lg: "100%", md: "100%", sm: "90%", xs: "90%" }}
           height="450px"
-          p={{ lg: "30px", md: "20px", sm: "20px", xs: "30px" }}
+          p={{
+            lg: "30px",
+            md: "0 0px 0 30px",
+            sm: "0 0px 0 30px",
+            xs: "0 0px 0 30px",
+          }}
         >
           <Stack
             alignItems="start"
@@ -141,36 +164,29 @@ const AutoDatabase = () => {
             className="main-title"
             textAlign="center"
           >
-            Automated Database Management Systems
+            {t("automatedDatabase")}
           </Typography>
-          <Stack
-            spacing={2}
-            direction="row"
-            alignItems="center"
-            justifyContent="center"
-            mb="30px"
-          >
-            <span
-              style={{
-                height: "4px",
-                width: "29%",
-                borderRadius: "10000%",
 
-                background:
-                  " linear-gradient(90deg, rgba(255,255,255,1)  0%, rgba(0,224,255,1)100%)",
-              }}
-            ></span>
-            <span
-              style={{
-                background:
-                  " linear-gradient(90deg,rgba(0,224,255,1)  0%, rgba(255,255,255,1) 100%)",
-                width: "29%",
-                height: "4px",
-                borderRadius: "10000%",
-              }}
-            ></span>
-          </Stack>
           <Stack alignItems="center">
+            <Stack
+              spacing={2}
+              direction="row"
+              alignItems="center"
+              justifyContent="center"
+              mb="30px"
+              width={{ lg: "50%", sm: "50%", md: "50%", xs: "60%" }}
+            >
+              <img
+                style={{ width: "80%" }}
+                src="/images/MainPageImages/Line.png"
+                alt=""
+              />
+              <img
+                style={{ width: "80%" }}
+                src="/images/MainPageImages/Line2.png"
+                alt=""
+              />
+            </Stack>
             <Typography
               color="#DDDDDDDD"
               fontSize={{ lg: 18, md: 18, sm: 16, xs: 15 }}
@@ -185,9 +201,7 @@ const AutoDatabase = () => {
                 xs: "justify",
               }}
             >
-              Maximize your business potential and drive growth with our
-              innovative IT solution, designed to streamline your operations,
-              optimize your workflows, and deliver measurable results.
+              {t("automatedDatabaseText")}
             </Typography>
           </Stack>
           <Stack

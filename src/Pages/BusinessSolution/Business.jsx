@@ -1,26 +1,48 @@
 import { Box, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
-import { BusinessData } from "./components/data.mjs";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../Utils/motion";
+import { Trans, useTranslation } from "react-i18next";
 
 const Business = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery(theme.breakpoints.down("md"));
   const isMd = useMediaQuery(theme.breakpoints.down("lg"));
+  const { t, i18n } = useTranslation();
 
+  const BusinessData = [
+    {
+      img: "/images/MainPageImages/business.png",
+      title: t("businessTextTitle"),
+      desc: <Trans i18nKey={"businessText"} components={{ 1: <br /> }} />,
+    },
+    {
+      img: "/images/MainPageImages/business1.png",
+      title: t("businessManagament"),
+      desc: (
+        <Trans i18nKey={"businessManagamentText"} components={{ 1: <br /> }} />
+      ),
+    },
+    {
+      img: "/images/MainPageImages/business2.png",
+      title: t("industry"),
+      desc: <Trans i18nKey={"industryText"} components={{ 1: <br /> }} />,
+    },
+  ];
   const BusinessCard = ({ index, title, img, desc }) => (
     <Tilt
       style={{
         ...(isMobile
-          ? { width: "100%", height: "440px" }
+          ? {
+              width: "100%",
+            }
           : isTablet
-          ? { width: "360px", height: "590px" }
+          ? { width: "360px", height: "100%" }
           : isMd
           ? { width: "420px", height: "480px" }
-          : { width: "420px", height: "500px" }),
+          : { width: "420px", height: "100%" }),
       }}
       options={{
         scale: isMobile ? "none" : 1,
@@ -30,10 +52,10 @@ const Business = () => {
     >
       <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
         <Stack
-          ml={{ lg: 6, md: 10, sm: 6, xs: 12 }}
-          height={{ lg: 280, md: 250, sm: 220, xs: 180 }}
+          ml={{ lg: 8, md: 10, sm: 6, xs: 14 }}
+          height={{ lg: 220, md: 200, sm: 180, xs: 130 }}
           alignItems="center"
-          mt={{ lg: -20, md: -20, sm: -16, xs: -13 }}
+          mt={{ lg: -15, md: -15, sm: -11, xs: -8 }}
           position="absolute"
         >
           <img
@@ -45,10 +67,16 @@ const Business = () => {
         </Stack>
         <Stack
           width={{ lg: "100%", md: "100%", sm: "90%", xs: "95%" }}
-          height="auto"
+          height={{
+            lg: "100%",
+            md: 580,
+            sm: "100%",
+            xs: "100%",
+          }}
           p={{ lg: "20px", md: "20px", sm: "20px", xs: "20px" }}
           border="5px solid #00E0FF"
           borderRadius="20px"
+          mb={7}
         >
           <Typography
             color="#fff"
@@ -98,35 +126,29 @@ const Business = () => {
             className="main-title"
             textAlign="center"
           >
-            Business Solutions
+            {t("business")}
           </Typography>
-          <Stack
-            spacing={2}
-            direction="row"
-            alignItems="center"
-            justifyContent="center"
-            mb="30px"
-          >
-            <span
-              style={{
-                height: "4px",
-                width: "29%",
-                borderRadius: "10000%",
-                background:
-                  " linear-gradient(90deg, rgba(255,255,255,1)  0%, rgba(0,224,255,1)100%)",
-              }}
-            ></span>
-            <span
-              style={{
-                background:
-                  " linear-gradient(90deg,rgba(0,224,255,1)  0%, rgba(255,255,255,1) 100%)",
-                width: "29%",
-                height: "4px",
-                borderRadius: "10000%",
-              }}
-            ></span>
-          </Stack>
+
           <Stack alignItems="center">
+            <Stack
+              spacing={2}
+              direction="row"
+              alignItems="center"
+              justifyContent="center"
+              mb="30px"
+              width={{ lg: "50%", sm: "50%", md: "50%", xs: "100%" }}
+            >
+              <img
+                style={{ width: "50%" }}
+                src="/images/MainPageImages/Line.png"
+                alt=""
+              />
+              <img
+                style={{ width: "50%" }}
+                src="/images/MainPageImages/Line2.png"
+                alt=""
+              />
+            </Stack>
             <Typography
               color="#DDDDDDDD"
               fontSize={{ lg: 18, md: 18, sm: 16, xs: 15 }}
@@ -141,9 +163,7 @@ const Business = () => {
                 xs: "justify",
               }}
             >
-              Maximize your business potential and drive growth with our
-              innovative IT solution, designed to streamline your operations,
-              optimize your workflows, and deliver measurable results.
+              {t("businessDesc")}
             </Typography>
           </Stack>
           <Stack

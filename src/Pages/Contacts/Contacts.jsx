@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Box,
   Button,
@@ -11,8 +11,14 @@ import EastIcon from "@mui/icons-material/East";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import TabletAndroidOutlinedIcon from "@mui/icons-material/TabletAndroidOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import { useTranslation } from "react-i18next";
 
 const Contacts = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const { t } = useTranslation();
+
   return (
     <Box
       sx={{
@@ -43,7 +49,7 @@ const Contacts = () => {
             className="main-title"
             textAlign="center"
           >
-            Контакты
+            {t("contact")}
           </Typography>
           <Typography
             color="#DDDDDD"
@@ -53,10 +59,7 @@ const Contacts = () => {
             fontSize={{ lg: 13, md: 13, sm: 13, xs: 12 }}
             textAlign="center"
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            {t("wish")}
           </Typography>
           <Typography
             color="#fff"
@@ -66,7 +69,7 @@ const Contacts = () => {
             className="main-title"
             textAlign="center"
           >
-            Адрес
+            {t("adress")}
           </Typography>
           <Typography
             color="#DDDDDD"
@@ -76,7 +79,7 @@ const Contacts = () => {
             fontSize={{ lg: 13, md: 13, sm: 13, xs: 12 }}
             textAlign="center"
           >
-            Ашхабад, Проспект Гарашсызлык 49/1
+            {t("adress2")}
           </Typography>
           <Typography
             color="#fff"
@@ -86,7 +89,7 @@ const Contacts = () => {
             className="main-title"
             textAlign="center"
           >
-            Номер
+            {t("number")}
           </Typography>
           <Typography
             color="#DDDDDD"
@@ -99,7 +102,7 @@ const Contacts = () => {
               href="tel: (+993 12) 48 66 40"
               style={{ textDecoration: "none", color: "#DDDDDD" }}
             >
-              Офис: (+993 12) 48 66 40
+              {t("officeNumber")}
             </a>
           </Typography>
           <Typography
@@ -114,14 +117,14 @@ const Contacts = () => {
               href="tel: +99362042189"
               style={{ textDecoration: "none", color: "#DDDDDD" }}
             >
-              Мобильный: (+993) 62 04 21 89
+              {t("mobile")}
             </a>
           </Typography>
         </Stack>
 
         <Stack
-          width={{ lg: 500, md: 500, sm: 500, xs: "100%" }}
-          height={550}
+          width={{ lg: 520, md: 500, sm: 600, xs: "100%" }}
+          height={{ lg: 600, md: 600, sm: 500, xs: 480 }}
           alignItems="center"
           sx={{
             webkitBoxShadow: "9px 12px 39px 2px rgba(0,0,0,0.75)",
@@ -129,6 +132,8 @@ const Contacts = () => {
             boxShadow: "9px 12px 39px 2px rgba(0,0,0,0.75)",
             background: "#04101C",
             zIndex: "100",
+            border: "1px solid #114896",
+            borderRadius: "10px",
           }}
         >
           <Typography
@@ -146,12 +151,19 @@ const Contacts = () => {
             textAlign="center"
             mt="30px"
           >
-            Напишите нам
+            {t("write")}
           </Typography>
-          <Stack width="90%" mt="30px" spacing="20px">
+          <Stack
+            width="90%"
+            mt="30px"
+            spacing={{ lg: "30px", md: "20px", sm: "15px", xs: "10px" }}
+            p={{ lg: "0 60px", md: "0 30px", sm: "0 20px", xs: "0 10px" }}
+          >
             <TextField
               autoComplete={false}
               sx={{
+                height: "60px",
+                padding: "5px 0",
                 "& .MuiInput-underline::before": {
                   borderBottomColor: "#A1A1A1",
                 },
@@ -161,6 +173,8 @@ const Contacts = () => {
 
                 "& .MuiInputLabel-standard": {
                   color: "#A1A1A1",
+                  pl: "15px",
+                  fontSize: 13,
                 },
                 "& .MuiInputBase-input": { color: "#A1A1A1" },
                 "& .MuiInputBase-root:hover": {
@@ -171,26 +185,29 @@ const Contacts = () => {
                 endAdornment: (
                   <InputAdornment position="end">
                     <PersonOutlineOutlinedIcon
-                      sx={{ color: "rgba(0,224,255,1)" }}
+                      sx={{ color: "rgba(0,224,255,1)", mb: "20px" }}
                     />
                   </InputAdornment>
                 ),
               }}
               variant="standard"
-              label="Имя"
+              label={t("name")}
             ></TextField>
             <TextField
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
                     <TabletAndroidOutlinedIcon
-                      sx={{ color: "rgba(0,224,255,1)" }}
+                      sx={{ color: "rgba(0,224,255,1)", mb: "20px" }}
                     />
                   </InputAdornment>
                 ),
               }}
               autoComplete={false}
               sx={{
+                height: "60px",
+                padding: "5px 0",
+
                 "& .MuiInput-underline::before": {
                   borderBottomColor: "#A1A1A1",
                 },
@@ -199,6 +216,8 @@ const Contacts = () => {
                 },
 
                 "& .MuiInputLabel-standard": {
+                  pl: "15px",
+                  fontSize: 13,
                   color: "#A1A1A1",
                 },
                 "& .MuiInputBase-input": { color: "#A1A1A1" },
@@ -207,18 +226,23 @@ const Contacts = () => {
                 },
               }}
               variant="standard"
-              label="Телефонный номер"
+              label={t("mobilePhone")}
             ></TextField>
             <TextField
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
-                    <EmailOutlinedIcon sx={{ color: "rgba(0,224,255,1)" }} />
+                    <EmailOutlinedIcon
+                      sx={{ color: "rgba(0,224,255,1)", mb: "20px" }}
+                    />
                   </InputAdornment>
                 ),
               }}
               autoComplete={false}
               sx={{
+                height: "60px",
+                padding: "5px 0",
+
                 "& .MuiInput-underline::before": {
                   borderBottomColor: "#A1A1A1",
                 },
@@ -227,6 +251,8 @@ const Contacts = () => {
                 },
 
                 "& .MuiInputLabel-standard": {
+                  pl: "15px",
+                  fontSize: 13,
                   color: "#A1A1A1",
                 },
                 "& .MuiInputBase-input": { color: "#A1A1A1" },
@@ -235,12 +261,12 @@ const Contacts = () => {
                 },
               }}
               variant="standard"
-              label="Э-почта"
+              label={t("email")}
             ></TextField>
             <TextField
               InputProps={{
                 endAdornment: (
-                  <InputAdornment position="end">
+                  <InputAdornment position="end" sx={{ mb: "20px" }}>
                     <img
                       src="/images/writeIcon.png"
                       style={{ wdith: 24, height: 24 }}
@@ -251,6 +277,9 @@ const Contacts = () => {
               }}
               autoComplete={false}
               sx={{
+                height: "60px",
+                padding: "5px 0",
+
                 "& .MuiInput-underline::before": {
                   borderBottomColor: "#A1A1A1",
                 },
@@ -259,6 +288,8 @@ const Contacts = () => {
                 },
 
                 "& .MuiInputLabel-standard": {
+                  fontSize: 13,
+                  pl: "15px",
                   color: "#A1A1A1",
                 },
                 "& .MuiInputBase-input": { color: "#A1A1A1" },
@@ -267,9 +298,9 @@ const Contacts = () => {
                 },
               }}
               variant="standard"
-              label="Сообщение"
+              label={t("message")}
             ></TextField>
-            <Stack alignItems="center" pt="50px">
+            <Stack alignItems="center" pt="20px">
               <Button
                 sx={{
                   color: "#00E0FF",
@@ -292,7 +323,7 @@ const Contacts = () => {
                   },
                 }}
               >
-                Отправить
+                {t("send")}
                 <EastIcon />
               </Button>
             </Stack>
