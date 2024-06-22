@@ -10,7 +10,7 @@ import { StarsCanvas } from "../Canvas";
 const MainLayout = () => {
   return (
     <Box>
-      <StarsCanvas />
+      {/* <StarsCanvas /> */}
       <Home />
       <About />
       <Business />
