@@ -16,17 +16,24 @@ const Home = () => {
   }, []);
   const { t } = useTranslation();
   return (
-    <Box minHeight="87vh" borderBottom="1px solid gray">
+    <Box minHeight={{ lg: "87vh", xs: "90vh" }} borderBottom="1px solid gray">
       <Stack
         sx={{
           position: "absolute",
           zIndex: 100,
-          top: { lg: "16%", md: "15%", sm: "15%", xs: "11.5%" },
+          top: { lg: "5%", md: "15%", sm: "15%", xs: "0%" },
           pr: { lg: "50px", md: "40px", sm: "30px", xs: "20px" },
           pl: { lg: "50px", md: "40px", sm: "30px", xs: "20px" },
-          justifyContent: "space-between",
+          justifyContent: {
+            lg: "space-between",
+            md: "space-between",
+            sm: "space-between",
+            xs: "space-evenly",
+          },
           alignItems: "center",
           width: "100%",
+          height: "100%",
+          mt: { xs: "11.5%", lg: 0, md: 0, sm: 0 },
         }}
         direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
       >
