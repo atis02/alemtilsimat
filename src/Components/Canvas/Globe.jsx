@@ -55,31 +55,32 @@ export function Galaxy(props) {
   const MyGalaxy = () => {
     let rotationAngle = 0;
     useFrame(({ clock }) => {
-      rotationAngle += 0.0005; // Adjust this value for desired rotation speed
+      rotationAngle += 0.005; // Adjust this value for desired rotation speed
 
       ref.current.rotation.z = rotationAngle;
     });
+
     return (
       <group {...props} dispose={null} ref={ref}>
         <pointLight
           position={[0, 0, 0]}
           ref={galaxyCenterLightRef}
-          intensity={0.3}
+          intensity={0.8}
         />
-        <Points scale={0.02} positions={positions} colors={colors}>
+        <Points scale={0.07} positions={positions} colors={colors}>
           <pointsMaterial
             map={starTexture}
             transparent
             depthWrite={false}
             vertexColors
-            opacity={0.3}
+            opacity={0.5}
             depthTest
-            size={0.001}
+            size={0.03}
           />
         </Points>
         <EffectComposer autoClear={false}>
           <SelectiveBloom
-            intensity={0.5}
+            intensity={1}
             luminanceThreshold={0.001}
             luminanceSmoothing={0.225}
             lights={[galaxyCenterLightRef]}
