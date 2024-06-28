@@ -9,8 +9,11 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import { Galaxy } from "../../Components/Canvas/Globe";
 import EastIcon from "@mui/icons-material/East";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -108,6 +111,9 @@ const Home = () => {
                       "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,224,255,1) 100%)",
                     color: "#114896",
                   },
+                }}
+                onClick={() => {
+                  navigate("/demo");
                 }}
               >
                 {/* <Typography

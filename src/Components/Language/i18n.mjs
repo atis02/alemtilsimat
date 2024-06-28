@@ -67,6 +67,7 @@ export const resources = {
       webSites: "Web Sites",
       applications: "Applications",
       allProjects: "All projects",
+      password: "Password",
     },
   },
   ru: {
@@ -133,6 +134,7 @@ export const resources = {
       projects: "Проекты ",
       webSites: "Веб-сайты",
       applications: "Мобильные приложения",
+      password: "Пароль",
     },
   },
 };

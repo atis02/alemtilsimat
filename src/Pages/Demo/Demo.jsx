@@ -2,6 +2,7 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { mobileData, projects, websitesData } from "./components/data.mjs";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Demo = () => {
   const [website, setWebsite] = useState(0);
@@ -9,6 +10,8 @@ const Demo = () => {
   const handleChange = (index) => {
     setWebsite(index);
   };
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

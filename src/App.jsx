@@ -10,8 +10,9 @@ import { Galaxy } from "./Components/Canvas/Globe";
 import About from "./Pages/About/About";
 import MainLayout from "./Components/Layout/MainLayout";
 import Footer from "./Pages/Footer/Footer";
-import Demo from "./Pages/Demo/Demo";
 import Contacts from "./Pages/Contacts/Contacts";
+import Login from "./Pages/Demo/components/Login";
+import Demo from "./Pages/Demo/Demo";
 
 function App() {
   const [loader, setLoader] = useState(false);
@@ -39,7 +40,8 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<MainLayout />} />
-            <Route path="/demo" element={<Demo />} />
+            <Route path="/demo" element={<Login />} />
+            <Route path="/projects" element={<Demo />} />
             <Route path="/contacts" element={<Contacts />} />
           </Routes>
           <Footer />
