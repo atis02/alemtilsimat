@@ -168,7 +168,7 @@ const Contacts = () => {
 
         <Stack
           width={{ lg: 520, md: 500, sm: 600, xs: "100%" }}
-          height={{ lg: 700, md: 600, sm: 500, xs: 480 }}
+          height={{ lg: 700, md: 600, sm: 560, xs: 530 }}
           alignItems="center"
           sx={{
             webkitBoxShadow: "9px 12px 39px 2px rgba(0,0,0,0.75)",
