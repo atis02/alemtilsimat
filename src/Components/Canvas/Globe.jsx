@@ -67,7 +67,7 @@ export function Galaxy(props) {
           ref={galaxyCenterLightRef}
           intensity={0.8}
         />
-        <Points scale={0.07} positions={positions} colors={colors}>
+        <Points scale={0.02} positions={positions} colors={colors}>
           <pointsMaterial
             map={starTexture}
             transparent
@@ -75,7 +75,7 @@ export function Galaxy(props) {
             vertexColors
             opacity={0.5}
             depthTest
-            size={0.03}
+            size={0.02}
           />
         </Points>
         <EffectComposer autoClear={false}>
@@ -90,7 +90,14 @@ export function Galaxy(props) {
     );
   };
   return (
-    <Stack position="absolute" top={0} zIndex={10} width="100%" height="100%">
+    <Stack
+      position="absolute"
+      right={0}
+      top={0}
+      zIndex={10}
+      width="100%"
+      height="100%"
+    >
       <Canvas
         frameloop="demand"
         shadows

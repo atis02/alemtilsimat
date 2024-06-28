@@ -12,7 +12,7 @@ const MainLayout = () => {
   return (
     <Box>
       {/* <StarsCanvas /> */}
-      {/* <Galaxy /> */}
+      <Galaxy />
       <Home />
       <About />
       <Business />
