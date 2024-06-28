@@ -65,22 +65,10 @@ const Demo = () => {
                 </Typography>
               </Stack>
             </Stack>
-            <Stack>
-              <Typography
-                color="#fff"
-                fontFamily="Montserrat"
-                fontWeight={600}
-                fontSize={{ lg: 40, md: 35, sm: 35, xs: 35 }}
-                className="main-title"
-                marginTop="20px"
-                textAlign="center"
-              >
-                {t("allProjects")} (20+)
-              </Typography>
-            </Stack>
+
             <Stack
               direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
-              mt="30px"
+              mt="20px"
               ml={{ lg: 17, md: 13, sm: 0, xs: 0 }}
               justifyContent={{
                 lg: "start",
@@ -88,15 +76,16 @@ const Demo = () => {
                 sm: "start",
                 xs: "center",
               }}
-              spacing={2}
             >
               <Button
                 sx={{
                   color: "#fff",
                   fontSize: { lg: 40, md: 37, sm: 30, xs: 20 },
-                  fontWeight: 700,
+                  fontWeight: 500,
                   fontFamily: "Montserrat",
                   textTransform: "revert",
+                  borderBottom: "1px solid #fff",
+
                   ...(website == "0"
                     ? { borderBottom: "3px solid #00E0FF " }
                     : ""),
@@ -111,13 +100,16 @@ const Demo = () => {
                 sx={{
                   color: "#fff",
                   fontSize: { lg: 40, md: 37, sm: 30, xs: 20 },
-                  fontWeight: 700,
+                  fontWeight: 500,
                   fontFamily: "Montserrat",
+                  borderBottom: "1px solid #fff",
                   textTransform: "revert",
                   ...(website == "1"
                     ? { borderBottom: "3px solid #00E0FF " }
                     : ""),
                   "&:hover": { background: "transparent" },
+                  pl: "30px",
+
                   borderRadius: "0px",
                 }}
                 onClick={() => handleChange(1)}
@@ -126,9 +118,10 @@ const Demo = () => {
               </Button>
               <Button
                 sx={{
+                  borderBottom: "1px solid #fff",
                   color: "#fff",
                   fontSize: { lg: 40, md: 37, sm: 30, xs: 20 },
-                  fontWeight: 700,
+                  fontWeight: 500,
                   fontFamily: "Montserrat",
                   textTransform: "revert",
                   ...(website == "2"
@@ -136,6 +129,7 @@ const Demo = () => {
                     : ""),
                   "&:hover": { background: "transparent" },
                   borderRadius: "0px",
+                  pl: "30px",
                   zIndex: 100,
                 }}
                 onClick={() => handleChange(2)}
@@ -213,12 +207,18 @@ const Demo = () => {
               ) : website == "2" ? (
                 <Stack
                   direction="row"
-                  justifyContent="center"
+                  justifyContent={{
+                    lg: "start",
+                    md: "start",
+                    sm: "center",
+                    xs: "center",
+                  }}
                   alignItems="center"
                   flexWrap="wrap"
-                  gap="86px"
+                  gap={{ lg: "86px", xs: "56px" }}
                   mt="30px"
                   zIndex="100"
+                  ml={{ lg: 17, md: 13, sm: 0, xs: 0 }}
                 >
                   {mobileData.map((elem) => (
                     <Stack alignItems="center">

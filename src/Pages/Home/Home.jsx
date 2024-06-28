@@ -24,7 +24,7 @@ const Home = () => {
         sx={{
           position: "absolute",
           zIndex: 100,
-          top: { lg: "5%", md: "15%", sm: "15%", xs: "0%" },
+          top: { lg: "5%", md: "8%", sm: "8%", xs: "0" },
           pr: { lg: "50px", md: "40px", sm: "30px", xs: "20px" },
           pl: { lg: "50px", md: "40px", sm: "30px", xs: "20px" },
           justifyContent: {
@@ -40,83 +40,78 @@ const Home = () => {
         }}
         direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
       >
-        <Stack
-          alignItems="center"
-          direction="row"
-          justifyContent="space-between"
-        >
-          <Stack>
-            <Stack direction="row" alignItems="center" spacing={-4}>
-              <Stack
-                width={{ lg: "350px", md: "300px", sm: "200px", xs: "150px" }}
-                height={{ lg: "368px", md: "318px", sm: "218px", xs: "168px" }}
-              >
-                <img
-                  style={{ width: "auto", height: "100%" }}
-                  src="/images/Logo.png"
-                  alt=""
-                />
-              </Stack>
-              <Stack>
-                <Typography
-                  color="#fff"
-                  fontFamily="Montserrat"
-                  fontWeight={600}
-                  fontSize={{ lg: 74, md: 64, sm: 44, xs: 30 }}
-                  ml={{ lg: -15, md: -5, sm: -4, xs: -2 }}
-                  lineHeight={{
-                    lg: "76px",
-                    md: "56px",
-                    sm: "46px",
-                    xs: "36px",
-                  }}
-                  className="main-title"
-                >
-                  Älem Tilsimat
-                </Typography>
-              </Stack>
+        <Stack justifyContent="center">
+          <Stack direction="row" alignItems="center" spacing={-4}>
+            <Stack
+              width={{ lg: "350px", md: "300px", sm: "200px", xs: "150px" }}
+              height={{ lg: "368px", md: "318px", sm: "218px", xs: "168px" }}
+            >
+              <img
+                style={{ width: "auto", height: "100%" }}
+                src="/images/Logo.png"
+                alt=""
+              />
             </Stack>
             <Stack>
               <Typography
-                color="#dddddd"
-                maxWidth={600}
+                color="#fff"
                 fontFamily="Montserrat"
-                fontSize={{ lg: 20, md: 18, sm: 16, xs: 15 }}
-                mt={{ lg: "50px", md: "40px", sm: "30px", xs: "20px" }}
+                fontWeight={600}
+                fontSize={{ lg: 74, md: 64, sm: 44, xs: 30 }}
+                ml={{ lg: -15, md: -5, sm: -4, xs: -2 }}
+                lineHeight={{
+                  lg: "76px",
+                  md: "56px",
+                  sm: "46px",
+                  xs: "36px",
+                }}
+                className="main-title"
               >
-                {t("homeTitle")}
+                Älem Tilsimat
               </Typography>
-              <Button
-                sx={{
-                  color: "#00E0FF",
-                  border: "2px solid #00E0FF",
-                  borderRadius: {
-                    lg: "26px",
-                    md: "20px",
-                    sm: "15px",
-                    xs: "15px",
-                  },
-                  maxWidth: { lg: 273, md: 243, sm: 200, xs: 203 },
-                  textTransform: "initial",
-                  height: 60,
-                  display: "flex",
-                  gap: "10px",
-                  fontSize: { lg: 20, md: 18, sm: 16, xs: 15 },
-                  fontWeight: 600,
-                  mt: "30px",
-                  transition: "all ease 0.4s",
-                  "&:hover": {
-                    gap: "17px",
-                    background:
-                      "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,224,255,1) 100%)",
-                    color: "#114896",
-                  },
-                }}
-                onClick={() => {
-                  navigate("/demo");
-                }}
-              >
-                {/* <Typography
+            </Stack>
+          </Stack>
+          <Stack>
+            <Typography
+              color="#dddddd"
+              maxWidth={750}
+              fontFamily="Montserrat"
+              fontSize={{ lg: 20, md: 18, sm: 16, xs: 15 }}
+              mt={{ lg: "30px", md: "30px", sm: "30px", xs: "20px" }}
+            >
+              {t("homeTitle")}
+            </Typography>
+            <Button
+              sx={{
+                color: "#00E0FF",
+                border: "2px solid #00E0FF",
+                borderRadius: {
+                  lg: "26px",
+                  md: "20px",
+                  sm: "15px",
+                  xs: "15px",
+                },
+                maxWidth: { lg: 273, md: 243, sm: 200, xs: 203 },
+                textTransform: "initial",
+                height: 60,
+                display: "flex",
+                gap: "10px",
+                fontSize: { lg: 20, md: 18, sm: 16, xs: 15 },
+                fontWeight: 600,
+                mt: "30px",
+                transition: "all ease 0.4s",
+                "&:hover": {
+                  gap: "17px",
+                  background:
+                    "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,224,255,1) 100%)",
+                  color: "#114896",
+                },
+              }}
+              onClick={() => {
+                navigate("/demo");
+              }}
+            >
+              {/* <Typography
                   color="#00E0FF"
                   fontWeight={600}
                   fontSize={{ lg: 20, md: 18, sm: 16, xs: 15 }}
@@ -124,16 +119,12 @@ const Home = () => {
                     "&:hover": { color: "#114896" },
                   }}
                 > */}{" "}
-                {t("explore")}
-                {/* </Typography> */}
-                <EastIcon />
-              </Button>
-            </Stack>
+              {t("explore")}
+              {/* </Typography> */}
+              <EastIcon />
+            </Button>
           </Stack>
         </Stack>
-
-        {/* <EarthCanvas /> */}
-        {/* <Galaxy /> */}
       </Stack>
     </Box>
   );

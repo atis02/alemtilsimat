@@ -24,7 +24,7 @@ const About = () => {
         >
           <img
             src="/images/MainPageImages/ABout2.png"
-            style={{ width: "auto", height: "100%", opacity: "20%" }}
+            style={{ width: "auto", height: "100%", opacity: "5%" }}
             alt=""
           />
           <Stack

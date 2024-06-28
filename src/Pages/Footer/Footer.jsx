@@ -21,7 +21,6 @@ const Footer = () => {
     { title: t("home"), link: "/" },
     { title: t("demo"), link: "/demo" },
     { title: t("contact"), link: "/contacts" },
-    { title: t("vacancy"), link: "/vacancy" },
   ];
 
   return (
@@ -35,9 +34,9 @@ const Footer = () => {
           direction="row"
           flexWrap="wrap"
           justifyContent="space-between"
-          spacing={{ lg: "50px", md: 0, sm: 0, xs: 0 }}
+          spacing={{ lg: "10px", md: 0, sm: 0, xs: 0 }}
         >
-          <Stack maxWidth={405} pb={{ lg: 0, md: 2, sm: 2, xs: 2 }}>
+          <Stack maxWidth={435} pb={{ lg: 0, md: 2, sm: 2, xs: 2 }}>
             <Stack direction="row" alignItems="center" spacing={-4}>
               <Stack
                 width={{ lg: "105px", md: "100px", sm: "100px", xs: "100px" }}
@@ -71,7 +70,7 @@ const Footer = () => {
             <Stack>
               <Typography
                 color="#dddddd"
-                maxWidth={600}
+                maxWidth={750}
                 fontFamily="Montserrat"
                 fontSize={{ lg: 13, md: 12, sm: 12, xs: 11 }}
                 mt={{ lg: "20px", md: "20px", sm: "10px", xs: "10px" }}
@@ -80,7 +79,7 @@ const Footer = () => {
               </Typography>
             </Stack>
           </Stack>
-          <Stack direction="column" spacing="15px">
+          <Stack direction="column" spacing="22px">
             {navlinks.map((elem, index) => (
               <Stack key={index}>
                 <NavLink

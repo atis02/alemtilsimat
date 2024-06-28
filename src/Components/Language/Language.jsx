@@ -42,7 +42,7 @@ export default function Language() {
     i18n.language === "tm"
       ? {
           color: "#3a3a3a",
-          backgroundColor: "#2265a7",
+          backgroundColor: "#fff",
 
           "&:hover": { backgroundColor: "#666666" },
         }
@@ -51,16 +51,16 @@ export default function Language() {
     i18n.language === "ru"
       ? {
           color: "#fff",
-          backgroundColor: "#2265a7",
-          "&:hover": { backgroundColor: "#666666" },
+          backgroundColor: "#00E0FF",
+          "&:hover": { backgroundColor: "#00E0FF" },
         }
       : { color: "#fff" };
   const lang3 =
     i18n.language === "en"
       ? {
           color: "#fff",
-          backgroundColor: "#2265a7",
-          "&:hover": { backgroundColor: "#666666" },
+          backgroundColor: "#00E0FF",
+          "&:hover": { backgroundColor: "#00E0FF" },
         }
       : { color: "#fff" };
 
@@ -83,7 +83,7 @@ export default function Language() {
             <Typography
               fontFamily="Montserrat"
               textTransform="capitalize"
-              fontWeight={600}
+              fontWeight={500}
               sx={{ ...(isMobile ? { fontSize: 15 } : { fontSize: 20 }) }}
               color="#fff"
             >
@@ -93,7 +93,7 @@ export default function Language() {
         ) : (
           <Stack direction="row" spacing={1}>
             <Typography
-              fontWeight={600}
+              fontWeight={500}
               sx={{ ...(isMobile ? { fontSize: 15 } : { fontSize: 20 }) }}
               color="#fff"
               fontFamily="Montserrat"

@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
+  IconButton,
   InputAdornment,
   Stack,
   TextField,
@@ -11,14 +12,32 @@ import EastIcon from "@mui/icons-material/East";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import TabletAndroidOutlinedIcon from "@mui/icons-material/TabletAndroidOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import Replay from "@mui/icons-material/Replay";
 import { useTranslation } from "react-i18next";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contacts = () => {
+  const randomString = Math.random().toString(36).slice(8);
+  const [captcha, setCaptcha] = useState(randomString);
+  const [text, setText] = useState("");
+  const [valid, setValid] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const { t } = useTranslation();
-
+  const onChange = () => {};
+  const refreshString = () => {
+    setCaptcha(Math.random().toString(36).slice(8));
+  };
+  const matchCaptcha = (event) => {
+    event.preventDefault();
+    if (text === captcha) {
+      setValid(false);
+    } else {
+      setValid(true);
+    }
+  };
   return (
     <Box
       sx={{
@@ -53,7 +72,7 @@ const Contacts = () => {
           </Typography>
           <Typography
             color="#DDDDDD"
-            mb="30px"
+            mb="40px"
             fontFamily="Montserrat"
             fontWeight={400}
             fontSize={{ lg: 13, md: 13, sm: 13, xs: 12 }}
@@ -73,7 +92,7 @@ const Contacts = () => {
           </Typography>
           <Typography
             color="#DDDDDD"
-            mb="30px"
+            mb="40px"
             fontFamily="Montserrat"
             fontWeight={400}
             fontSize={{ lg: 13, md: 13, sm: 13, xs: 12 }}
@@ -107,7 +126,7 @@ const Contacts = () => {
           </Typography>
           <Typography
             color="#DDDDDD"
-            mb="30px"
+            mb="40px"
             fontFamily="Montserrat"
             fontWeight={400}
             fontSize={{ lg: 13, md: 13, sm: 13, xs: 12 }}
@@ -120,11 +139,36 @@ const Contacts = () => {
               {t("mobile")}
             </a>
           </Typography>
+          <Typography
+            color="#fff"
+            fontFamily="Montserrat"
+            fontWeight={600}
+            fontSize={{ lg: 24, md: 20, sm: 18, xs: 16 }}
+            className="main-title"
+            textAlign="center"
+          >
+            {t("email")}
+          </Typography>
+          <Typography
+            color="#DDDDDD"
+            mb="30px"
+            fontFamily="Montserrat"
+            fontWeight={400}
+            fontSize={{ lg: 13, md: 13, sm: 13, xs: 12 }}
+            textAlign="center"
+          >
+            <a
+              href="mailto:info@alemtilsimat.com"
+              style={{ textDecoration: "none", color: "#DDDDDD" }}
+            >
+              info@alemtilsimat.com
+            </a>
+          </Typography>
         </Stack>
 
         <Stack
           width={{ lg: 520, md: 500, sm: 600, xs: "100%" }}
-          height={{ lg: 600, md: 600, sm: 500, xs: 480 }}
+          height={{ lg: 700, md: 600, sm: 500, xs: 480 }}
           alignItems="center"
           sx={{
             webkitBoxShadow: "9px 12px 39px 2px rgba(0,0,0,0.75)",
@@ -300,7 +344,63 @@ const Contacts = () => {
               variant="standard"
               label={t("message")}
             ></TextField>
-            <Stack alignItems="center" pt="20px">
+            {/* <ReCAPTCHA
+              sitekey="6LeNXgMqAAAAAGXbeSp9LWuDZDhJbkAOIJQji2-R"
+              onChange={onChange}
+            /> */}
+            <form onClick={matchCaptcha}>
+              <Stack direction="row" justifyContent="space-between">
+                <TextField
+                  autoComplete={false}
+                  sx={{
+                    height: "60px",
+                    padding: "5px 0",
+
+                    "& .MuiInput-underline::before": {
+                      borderBottomColor: "#A1A1A1",
+                    },
+                    "& .MuiInput-underline::after": {
+                      ...(valid
+                        ? { borderBottomColor: "red" }
+                        : { borderBottomColor: "#A1A1A1" }),
+                    },
+
+                    "& .MuiInputLabel-standard": {
+                      fontSize: 13,
+                      pl: "15px",
+                      color: "#A1A1A1",
+                    },
+
+                    "& .MuiInputBase-input": { color: "#A1A1A1" },
+                    "& .MuiInputBase-root:hover": {
+                      borderBottomColor: "#A1A1A1", // Change to your desired color
+                    },
+                  }}
+                  onChange={(e) => setText(e.target.value)}
+                  variant="standard"
+                  label="Captcha"
+                  error={valid}
+                  helperText={valid && "Invalid captcha"}
+                ></TextField>
+                <Stack direction="row" alignItems="center">
+                  <Typography
+                    backgroundColor="#fff"
+                    width={100}
+                    height={35}
+                    borderRadius="10px"
+                    textAlign="center"
+                    pt="5px"
+                  >
+                    {captcha}
+                  </Typography>
+                  <IconButton sx={{ color: "#6BEDFF" }} onClick={refreshString}>
+                    <Replay />
+                  </IconButton>
+                </Stack>
+              </Stack>
+            </form>
+
+            <Stack alignItems="center">
               <Button
                 sx={{
                   color: "#00E0FF",

@@ -13,7 +13,7 @@ export const resources = {
       number: "Number",
       officeNumber: "Office: (+993 12) 48 66 40",
       mobile: "Mobile: (+993) 62 04 21 89",
-      write: "Tell us",
+      write: "Write to us",
       name: "Name",
       mobilePhone: "Phone number",
       email: "E-mail",

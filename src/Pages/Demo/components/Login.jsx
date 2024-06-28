@@ -118,7 +118,11 @@ const Login = () => {
                 endAdornment: (
                   <InputAdornment position="end">
                     <EmailOutlinedIcon
-                      sx={{ color: "rgba(0,224,255,1)", mb: "20px" }}
+                      sx={{
+                        color: "rgba(0,224,255,1)",
+                        mb: "20px",
+                        mr: "15px",
+                      }}
                     />
                   </InputAdornment>
                 ),
@@ -158,7 +162,7 @@ const Login = () => {
                       onClick={handleClickShowPassword}
                       onMouseDown={handleMouseDownPassword}
                       edge="end"
-                      sx={{ color: "#00E0FF", mb: "20px" }}
+                      sx={{ color: "#00E0FF", mb: "20px", mr: "5px" }}
                     >
                       {showPassword ? <VisibilityOff /> : <Visibility />}
                     </IconButton>
