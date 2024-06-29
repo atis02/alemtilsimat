@@ -2,11 +2,9 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../../styles";
-import { EarthCanvas, StarsCanvas } from "../../Components/Canvas";
 import { SectionWrapper } from "../../Hoc";
 import { slideIn } from "../../Utils/motion";
 import { Box, Button, Stack, Typography } from "@mui/material";
-import { Galaxy } from "../../Components/Canvas/Globe";
 import EastIcon from "@mui/icons-material/East";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";

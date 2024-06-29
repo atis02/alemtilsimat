@@ -5,8 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import { Suspense, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { slideIn } from "./Utils/motion";
-import { CanvasLoader, EarthCanvas, StarsCanvas } from "./Components/Canvas";
-import { Galaxy } from "./Components/Canvas/Globe";
+import { CanvasLoader } from "./Components/Canvas";
 import About from "./Pages/About/About";
 import MainLayout from "./Components/Layout/MainLayout";
 import Footer from "./Pages/Footer/Footer";
@@ -29,13 +28,9 @@ function App() {
 
   return (
     <>
-      {/* <Galaxy /> */}
       {/* {loader ? (
       ) : ( */}
       <Box sx={{ backgroundColor: "#04101c", minHeight: "100vh" }}>
-        {/* <StarsCanvas /> */}
-        {/* <Galaxy /> */}
-
         <BrowserRouter>
           <Navbar />
           <Routes>
