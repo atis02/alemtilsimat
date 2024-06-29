@@ -8,6 +8,7 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import Galaxy from "../../Components/Canvas/Galaxy";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Home = () => {
   }, []);
   const { t } = useTranslation();
   return (
-    <Box minHeight={{ lg: "87vh", xs: "90vh" }} borderBottom="1px solid gray">
+    <Box minHeight={{ lg: "86.6vh", xs: "90vh" }} borderBottom="1px solid gray">
       <Stack
         sx={{
           position: "absolute",
@@ -38,6 +39,8 @@ const Home = () => {
         }}
         direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
       >
+        {/* <Galaxy /> */}
+
         <Stack justifyContent="center">
           <Stack direction="row" alignItems="center" spacing={-4}>
             <Stack
