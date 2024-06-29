@@ -5,12 +5,14 @@ import About from "../../Pages/About/About";
 import HealthCare from "../../Pages/HealthCare/HealthCare";
 import Business from "../../Pages/BusinessSolution/Business";
 import AutoDatabase from "../../Pages/AutoDatabase/AutoDatabase";
-import Galaxy from "../Canvas/Galaxy";
+import Earth from "../Canvas/Earth";
+import { Galaxy } from "../Canvas/Galaxy";
 
 const MainLayout = () => {
   return (
     <Box>
       <Galaxy />
+      <Earth />
       <Home />
       <About />
       <Business />

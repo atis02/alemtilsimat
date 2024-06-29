@@ -8,7 +8,6 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import Galaxy from "../../Components/Canvas/Galaxy";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -39,9 +38,7 @@ const Home = () => {
         }}
         direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
       >
-        {/* <Galaxy /> */}
-
-        <Stack justifyContent="center">
+        <Stack justifyContent="center" alignItems="center">
           <Stack direction="row" alignItems="center" spacing={-4}>
             <Stack
               width={{ lg: "350px", md: "300px", sm: "200px", xs: "150px" }}
