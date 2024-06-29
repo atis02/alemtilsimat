@@ -38,7 +38,11 @@ const Home = () => {
         }}
         direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
       >
-        <Stack justifyContent="center" alignItems="center">
+        <Stack
+          justifyContent="center"
+          alignItems={{ lg: "center", md: "center", sm: "center", xs: "start" }}
+          width="100%"
+        >
           <Stack direction="row" alignItems="center" spacing={-4}>
             <Stack
               width={{ lg: "350px", md: "300px", sm: "200px", xs: "150px" }}
@@ -52,7 +56,6 @@ const Home = () => {
             </Stack>
             <Stack>
               <Typography
-                color="#fff"
                 fontFamily="Montserrat"
                 fontWeight={600}
                 fontSize={{ lg: 74, md: 64, sm: 44, xs: 30 }}
@@ -69,13 +72,26 @@ const Home = () => {
               </Typography>
             </Stack>
           </Stack>
-          <Stack>
+          <Stack
+            alignItems={{
+              lg: "center",
+              md: "center",
+              sm: "center",
+              xs: "start",
+            }}
+          >
             <Typography
               color="#dddddd"
               maxWidth={750}
               fontFamily="Montserrat"
               fontSize={{ lg: 20, md: 18, sm: 16, xs: 15 }}
               mt={{ lg: "30px", md: "30px", sm: "30px", xs: "20px" }}
+              textAlign={{
+                lg: "center",
+                md: "center",
+                sm: "center",
+                xs: "start",
+              }}
             >
               {t("homeTitle")}
             </Typography>
