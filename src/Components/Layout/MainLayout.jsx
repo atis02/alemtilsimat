@@ -11,8 +11,8 @@ import { Galaxy } from "../Canvas/Galaxy";
 const MainLayout = () => {
   return (
     <Box>
-      <Galaxy />
-      <Earth />
+      {/* <Galaxy /> */}
+      {/* <Earth /> */}
       <Home />
       <About />
       <Business />

@@ -60,37 +60,51 @@ const Navbar = () => {
     >
       <Stack
         direction="row"
-        spacing="30px"
-        pt={{ lg: "4vh", md: "4vh", sm: "3vh", xs: "2vh" }}
-        pl="50px"
-        pb={2}
-        sx={{
-          ...(isMobile ? { display: "none" } : { display: "flex" }),
-        }}
+        mr="50px"
+        alignItems="center"
+        justifyContent="space-between"
       >
-        <NavLink
-          onClick={() => setMobileMenuOpen(false)}
-          className="nav-link"
-          to="/"
+        <Stack
+          direction="row"
+          spacing="30px"
+          pt={{ lg: "4vh", md: "4vh", sm: "3vh", xs: "2vh" }}
+          pl="50px"
+          pb={2}
+          sx={{
+            ...(isMobile ? { display: "none" } : { display: "flex" }),
+          }}
         >
-          {t("home")}
-        </NavLink>
-        <NavLink
-          onClick={() => setMobileMenuOpen(false)}
-          className="nav-link"
-          to="/demo"
+          <NavLink
+            onClick={() => setMobileMenuOpen(false)}
+            className="nav-link"
+            to="/"
+          >
+            {t("home")}
+          </NavLink>
+          <NavLink
+            onClick={() => setMobileMenuOpen(false)}
+            className="nav-link"
+            to="/demo"
+          >
+            {t("demo")}
+          </NavLink>
+          <NavLink
+            onClick={() => setMobileMenuOpen(false)}
+            className="nav-link"
+            to="/contacts"
+          >
+            {t("contact")}
+          </NavLink>
+        </Stack>
+        <Stack
+          sx={{
+            ...(isMobile ? { display: "none" } : { display: "flex" }),
+          }}
         >
-          {t("demo")}
-        </NavLink>
-        <NavLink
-          onClick={() => setMobileMenuOpen(false)}
-          className="nav-link"
-          to="/contacts"
-        >
-          {t("contact")}
-        </NavLink>
-        <Language />
+          <Language />
+        </Stack>
       </Stack>
+
       <Stack
         direction="row"
         spacing={1}

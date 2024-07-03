@@ -37,7 +37,12 @@
   font-weight: 500;
   height: 34px;
   align-items: center;
+  transition: all ease 0.7s;
   
+}
+.nav-link:hover{
+  color: #0cfefc;
+  text-decoration: none;
 }
 .nav-link2{
   color: #ffffff;

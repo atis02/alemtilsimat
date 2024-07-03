@@ -9,6 +9,7 @@ import {
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import CallIcon from "@mui/icons-material/Call";
+import TabletAndroidOutlinedIcon from "@mui/icons-material/TabletAndroidOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import LanguageIcon from "@mui/icons-material/Language";
 import { useTranslation } from "react-i18next";
@@ -109,6 +110,22 @@ const Footer = () => {
                 }}
               >
                 (+993 12) 48 66 40
+              </Link>
+            </Stack>
+            <Stack direction="row" alignItems="center" color="#fff" spacing={2}>
+              <TabletAndroidOutlinedIcon />
+              <Link
+                to="tel:+99362042189"
+                style={{
+                  textDecoration: "none",
+                  color: "#FFFFFF",
+                  fontWeight: 500,
+                  ...(isMobile ? { fontSize: 16 } : { fontSize: 20 }),
+
+                  fontFamily: "Montserrat",
+                }}
+              >
+                (+993) 62 04 21 89
               </Link>
             </Stack>
             <Stack direction="row" alignItems="center" color="#fff" spacing={2}>

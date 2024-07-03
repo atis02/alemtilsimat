@@ -38,15 +38,11 @@ const Home = () => {
         }}
         direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
       >
-        <Stack
-          justifyContent="center"
-          alignItems={{ lg: "center", md: "center", sm: "center", xs: "start" }}
-          width="100%"
-        >
-          <Stack direction="row" alignItems="center" spacing={-4}>
+        <Stack justifyContent="center" alignItems="start">
+          <Stack direction="row" alignItems="center" spacing={-2}>
             <Stack
-              width={{ lg: "350px", md: "300px", sm: "200px", xs: "150px" }}
-              height={{ lg: "368px", md: "318px", sm: "218px", xs: "168px" }}
+              width={{ lg: "250px", md: "300px", sm: "200px", xs: "150px" }}
+              height={{ lg: "268px", md: "318px", sm: "218px", xs: "168px" }}
             >
               <img
                 style={{ width: "auto", height: "100%" }}
@@ -72,26 +68,13 @@ const Home = () => {
               </Typography>
             </Stack>
           </Stack>
-          <Stack
-            alignItems={{
-              lg: "center",
-              md: "center",
-              sm: "center",
-              xs: "start",
-            }}
-          >
+          <Stack>
             <Typography
               color="#dddddd"
               maxWidth={750}
               fontFamily="Montserrat"
               fontSize={{ lg: 20, md: 18, sm: 16, xs: 15 }}
               mt={{ lg: "30px", md: "30px", sm: "30px", xs: "20px" }}
-              textAlign={{
-                lg: "center",
-                md: "center",
-                sm: "center",
-                xs: "start",
-              }}
             >
               {t("homeTitle")}
             </Typography>
@@ -138,6 +121,12 @@ const Home = () => {
               <EastIcon />
             </Button>
           </Stack>
+        </Stack>
+        <Stack
+          width={{ lg: 710, md: 490, sm: 390, xs: 310 }}
+          height={{ lg: 755, md: 375, sm: 305, xs: 285 }}
+        >
+          <img src="/images/MainPageImages/about3.png" alt="" />
         </Stack>
       </Stack>
     </Box>

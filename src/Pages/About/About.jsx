@@ -32,8 +32,9 @@ const About = () => {
             height={{ lg: 555, md: 375, sm: 305, xs: 285 }}
             position="absolute"
             zIndex={10}
+            mt={{ lg: 7, md: 9, sm: 5, xs: 5 }}
           >
-            <img src="/images/MainPageImages/about3.png" alt="" />
+            <img src="/images/MainPageImages/About.png" alt="" />
           </Stack>
         </Stack>
         <Stack>
