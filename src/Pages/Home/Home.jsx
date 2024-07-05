@@ -24,7 +24,7 @@ const Home = () => {
           zIndex: 100,
           top: { lg: "5%", md: "8%", sm: "8%", xs: "0" },
           pr: { lg: "50px", md: "40px", sm: "30px", xs: "20px" },
-          pl: { lg: "50px", md: "40px", sm: "30px", xs: "20px" },
+          pl: { lg: "80px", md: "40px", sm: "30px", xs: "20px" },
           justifyContent: {
             lg: "space-between",
             md: "space-between",
@@ -41,8 +41,11 @@ const Home = () => {
         <Stack justifyContent="center" alignItems="start">
           <Stack direction="row" alignItems="center" spacing={-2}>
             <Stack
-              width={{ lg: "250px", md: "300px", sm: "200px", xs: "150px" }}
-              height={{ lg: "268px", md: "318px", sm: "218px", xs: "168px" }}
+              width={{ lg: "190px", md: "180px", sm: "200px", xs: "130px" }}
+              height={{ lg: "208px", md: "188px", sm: "218px", xs: "14  8px" }}
+              sx={{
+                display: { lg: "block", md: "block", sm: "block", xs: "none" },
+              }}
             >
               <img
                 style={{ width: "auto", height: "100%" }}
@@ -50,22 +53,42 @@ const Home = () => {
                 alt=""
               />
             </Stack>
-            <Stack>
+            <Stack
+              direction="row"
+              alignItems="center"
+              pb={{ lg: 0, md: 0, sm: 0, xs: 3 }}
+            >
               <Typography
                 fontFamily="Montserrat"
                 fontWeight={600}
-                fontSize={{ lg: 74, md: 64, sm: 44, xs: 30 }}
-                ml={{ lg: -15, md: -5, sm: -4, xs: -2 }}
+                fontSize={{ lg: 74, md: 44, sm: 44, xs: 30 }}
+                ml={{ lg: -10, md: -5, sm: -4, xs: 2.5 }}
                 lineHeight={{
-                  lg: "76px",
-                  md: "56px",
+                  lg: "78px",
+                  md: "76px",
                   sm: "46px",
                   xs: "36px",
+                }}
+                textAlign={{
+                  lg: "start",
+                  md: "start",
+                  sm: "start",
+                  xs: "center",
                 }}
                 className="main-title"
               >
                 Älem Tilsimat
               </Typography>
+              <Stack
+                width={{ lg: 700, md: 490, sm: 390, xs: 190 }}
+                height={{ lg: 700, md: 375, sm: 305, xs: 145 }}
+                sx={{
+                  display: { lg: "none", md: "none", sm: "none", xs: "flex" },
+                }}
+                mt={-5}
+              >
+                <img src="/images/MainPageImages/about3.png" alt="" />
+              </Stack>
             </Stack>
           </Stack>
           <Stack>
@@ -123,8 +146,11 @@ const Home = () => {
           </Stack>
         </Stack>
         <Stack
-          width={{ lg: 710, md: 490, sm: 390, xs: 310 }}
-          height={{ lg: 755, md: 375, sm: 305, xs: 285 }}
+          width={{ lg: 700, md: 490, sm: 390, xs: 190 }}
+          height={{ lg: 700, md: 375, sm: 305, xs: 145 }}
+          sx={{
+            display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+          }}
         >
           <img src="/images/MainPageImages/about3.png" alt="" />
         </Stack>

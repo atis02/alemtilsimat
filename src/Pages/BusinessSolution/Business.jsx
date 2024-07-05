@@ -42,7 +42,7 @@ const Business = () => {
           ? { width: "360px", height: "100%" }
           : isMd
           ? { width: "420px", height: "480px" }
-          : { width: "420px", height: "100%" }),
+          : { width: "410px", height: "100%" }),
       }}
       options={{
         scale: isMobile ? "none" : 1,
@@ -52,10 +52,10 @@ const Business = () => {
     >
       <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
         <Stack
-          ml={{ lg: 8, md: 10, sm: 6, xs: 14 }}
-          height={{ lg: 220, md: 200, sm: 180, xs: 130 }}
+          ml={{ lg: 8, md: 10, sm: 6, xs: 13 }}
+          height={{ lg: 220, md: 200, sm: 180, xs: 110 }}
           alignItems="center"
-          mt={{ lg: -15, md: -15, sm: -11, xs: -8 }}
+          mt={{ lg: -15, md: -15, sm: -11, xs: -7 }}
           position="absolute"
         >
           <img
@@ -66,7 +66,7 @@ const Business = () => {
           />
         </Stack>
         <Stack
-          width={{ lg: "100%", md: "100%", sm: "90%", xs: "95%" }}
+          width={{ lg: "100%", md: "100%", sm: "90%", xs: "100%" }}
           height={{
             lg: "100%",
             md: 580,
@@ -104,8 +104,8 @@ const Business = () => {
   return (
     <Box
       sx={{
-        pr: { lg: "50px", md: "40px", sm: "20px", xs: "20px" },
-        pl: { lg: "50px", md: "40px", sm: "20px", xs: "20px" },
+        pr: { lg: "80px", md: "40px", sm: "20px", xs: "20px" },
+        pl: { lg: "80px", md: "40px", sm: "20px", xs: "20px" },
         mt: "50px",
         borderBottom: "1px solid gray",
       }}
@@ -181,7 +181,7 @@ const Business = () => {
           </Stack>
         </Stack>
         <Stack
-          mt="140px"
+          mt="70px"
           direction={{ lg: "row", dm: "row", sm: "row", xs: "column" }}
           flexWrap="wrap"
           justifyContent="space-between"

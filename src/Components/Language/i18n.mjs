@@ -21,7 +21,7 @@ export const resources = {
       send: "Send",
       wish: ' Hope you`re happy with our service! Text "Feedback" to share your experience.',
       homeTitle:
-        "Development and implementation of IT projects of any complexity, development of websites and mobile applications",
+        "Development and implementation of IT projects of any complexity",
       explore: "Explore our work",
       about: "About us",
       aboutText:
@@ -88,8 +88,7 @@ export const resources = {
       message: "Сообщение",
       send: "Отправить",
       wish: "Мы рады, что Вы довольны нашим сервисом! Оставьте отзыв пожалуйста.",
-      homeTitle:
-        "Cоздание и внедрение ИТ проектов любой сложности, разработка веб сайтов и мобильных приложений",
+      homeTitle: "Cоздание и внедрение ИТ проектов любой сложности",
       explore: "Узнать больше",
       about: "О нас",
       aboutText:

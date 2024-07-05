@@ -7,8 +7,8 @@ const About = () => {
   return (
     <Box
       sx={{
-        pr: { lg: "50px", md: "40px", sm: "30px", xs: "20px" },
-        pl: { lg: "50px", md: "40px", sm: "30px", xs: "20px" },
+        pr: { lg: "80px", md: "40px", sm: "30px", xs: "20px" },
+        pl: { lg: "80px", md: "40px", sm: "30px", xs: "20px" },
         mt: "50px",
         pb: "50px",
         borderBottom: "1px solid gray",

@@ -62,13 +62,14 @@ const Navbar = () => {
         direction="row"
         mr="50px"
         alignItems="center"
-        justifyContent="space-between"
+        justifyContent="flex-end"
       >
         <Stack
           direction="row"
           spacing="30px"
           pt={{ lg: "4vh", md: "4vh", sm: "3vh", xs: "2vh" }}
-          pl="50px"
+          pl="80px"
+          pr="60px"
           pb={2}
           sx={{
             ...(isMobile ? { display: "none" } : { display: "flex" }),
@@ -79,6 +80,14 @@ const Navbar = () => {
             className="nav-link"
             to="/"
           >
+            <Stack
+              borderRadius="100%"
+              backgroundColor="#0cfefc"
+              width={8}
+              height={8}
+              sx={{ display: "none" }}
+              className="tocka"
+            ></Stack>
             {t("home")}
           </NavLink>
           <NavLink
@@ -86,6 +95,14 @@ const Navbar = () => {
             className="nav-link"
             to="/demo"
           >
+            <Stack
+              borderRadius="100%"
+              backgroundColor="#0cfefc"
+              width={8}
+              height={8}
+              sx={{ display: "none" }}
+              className="tocka"
+            ></Stack>
             {t("demo")}
           </NavLink>
           <NavLink
@@ -93,15 +110,23 @@ const Navbar = () => {
             className="nav-link"
             to="/contacts"
           >
+            <Stack
+              borderRadius="100%"
+              backgroundColor="#0cfefc"
+              width={8}
+              height={8}
+              sx={{ display: "none" }}
+              className="tocka"
+            ></Stack>
             {t("contact")}
           </NavLink>
-        </Stack>
-        <Stack
-          sx={{
-            ...(isMobile ? { display: "none" } : { display: "flex" }),
-          }}
-        >
-          <Language />
+          <Stack
+            sx={{
+              ...(isMobile ? { display: "none" } : { display: "flex" }),
+            }}
+          >
+            <Language />
+          </Stack>
         </Stack>
       </Stack>
 

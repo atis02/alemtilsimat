@@ -37,7 +37,7 @@ const HealthCare = () => {
         ...(isMobile
           ? {
               width: "100%",
-              height: "440px",
+              height: "400px",
             }
           : isTablet
           ? { width: "360px", height: "590px" }
@@ -58,7 +58,7 @@ const HealthCare = () => {
             lg: 530,
             md: 470,
             sm: 580,
-            xs: 420,
+            xs: 450,
           }}
           width={{ lg: 420, md: 430, sm: 340, xs: "90%" }}
         >
@@ -113,8 +113,8 @@ const HealthCare = () => {
   return (
     <Box
       sx={{
-        pr: { lg: "50px", md: "40px", sm: "20px", xs: "20px" },
-        pl: { lg: "50px", md: "40px", sm: "20px", xs: "20px" },
+        pr: { lg: "80px", md: "40px", sm: "20px", xs: "20px" },
+        pl: { lg: "80px", md: "40px", sm: "20px", xs: "20px" },
         mt: "50px",
         pb: "50px",
         borderBottom: "1px solid gray",

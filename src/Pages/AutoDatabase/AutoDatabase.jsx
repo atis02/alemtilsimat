@@ -101,9 +101,9 @@ const AutoDatabase = () => {
         >
           <Stack
             alignItems="start"
-            width={{ lg: 180, md: 180, sm: 180, xs: 130 }}
-            height={{ lg: 200, md: 200, sm: 180, xs: 150 }}
-            mt={-14}
+            width={{ lg: 180, md: 180, sm: 180, xs: 100 }}
+            height={{ lg: 200, md: 200, sm: 180, xs: 120 }}
+            mt={{ lg: -14, md: -14, sm: -14, xs: -9 }}
             ml={{ lg: -7, md: -7, sm: -7, xs: -6 }}
             position={"absolute"}
           >
@@ -142,8 +142,8 @@ const AutoDatabase = () => {
   return (
     <Box
       sx={{
-        pr: { lg: "50px", md: "40px", sm: "20px", xs: "20px" },
-        pl: { lg: "50px", md: "40px", sm: "20px", xs: "20px" },
+        pr: { lg: "80px", md: "40px", sm: "20px", xs: "20px" },
+        pl: { lg: "80px", md: "40px", sm: "20px", xs: "20px" },
         mt: "50px",
         pb: "50px",
       }}

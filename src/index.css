@@ -38,7 +38,8 @@
   height: 34px;
   align-items: center;
   transition: all ease 0.7s;
-  
+  display: flex;
+  gap: 6px;
 }
 .nav-link:hover{
   color: #0cfefc;
@@ -58,6 +59,7 @@
   border-bottom: 1.5px solid #0cfefc ;
   transition: all ease 0.4s;
   font-weight: 600;
-
 }
-
+.active .tocka{
+  display: flex;
+}

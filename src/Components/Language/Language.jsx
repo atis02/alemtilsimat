@@ -53,7 +53,7 @@ export default function Language() {
         cursor="pointer"
         variant="text"
         direction="row"
-        mt={-0.2}
+        mt={-0.8}
         alignItems="center"
         onClick={handleClick}
         sx={{
@@ -61,33 +61,30 @@ export default function Language() {
           gap: { lg: "5px", md: "3px", xs: 0 },
         }}
       >
-        {localStorage.getItem("lng") === "ru" ? (
-          <IconButton
-            direction="row"
-            onClick={() => handleLanguageChange("en")}
-            spacing={1}
-            sx={{ width: 50, height: 40 }}
-          >
-            <img
-              src="/images/rus.png"
-              style={{ width: "100%", height: "100%" }}
-              alt="ru"
-            />
-          </IconButton>
-        ) : (
-          <IconButton
-            direction="row"
-            onClick={() => handleLanguageChange("ru")}
-            spacing={1}
-            sx={{ width: 50, height: 40 }}
-          >
-            <img
-              src="/images/eng.png"
-              style={{ width: "100%", height: "100%" }}
-              alt="eng"
-            />
-          </IconButton>
-        )}
+        <IconButton
+          direction="row"
+          onClick={() => handleLanguageChange("ru")}
+          spacing={1}
+          sx={{ width: 50, height: 40 }}
+        >
+          <img
+            src="/images/rus.png"
+            style={{ width: "100%", height: "100%" }}
+            alt="ru"
+          />
+        </IconButton>
+        <IconButton
+          direction="row"
+          onClick={() => handleLanguageChange("en")}
+          spacing={1}
+          sx={{ width: 50, height: 40 }}
+        >
+          <img
+            src="/images/eng.png"
+            style={{ width: "100%", height: "100%" }}
+            alt="eng"
+          />
+        </IconButton>
       </Stack>
     </Box>
   );

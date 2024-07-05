@@ -29,7 +29,7 @@ const Footer = () => {
       <Box
         backgroundColor="#112334"
         maxHeight={{ lg: 300, md: "100%", sm: "100%", xs: "100%" }}
-        p={{ lg: "50px", md: "50px", sm: "50px", xs: "20px" }}
+        p={{ lg: "30px 80px", md: "50px", sm: "50px", xs: "20px" }}
       >
         <Stack
           direction="row"
