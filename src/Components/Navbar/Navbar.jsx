@@ -60,10 +60,52 @@ const Navbar = () => {
     >
       <Stack
         direction="row"
-        mr="50px"
+        pr={{ lg: "50px", md: "10px", sm: "0px", xs: "20px" }}
+        pl={{ lg: "80px", md: "40px", sm: "30px", xs: "20px" }}
         alignItems="center"
-        justifyContent="flex-end"
+        justifyContent="space-between"
       >
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Stack
+            direction="row"
+            alignItems="center"
+            sx={{
+              ...(scrolled
+                ? {
+                    display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+                  }
+                : {
+                    display: "none",
+                  }),
+            }}
+          >
+            <Stack width="50px" height="58px">
+              <img
+                style={{ width: "auto", height: "100%" }}
+                src="/images/Logo.png"
+                alt=""
+              />
+            </Stack>
+            <Stack>
+              <Typography
+                color="#fff"
+                fontFamily="Montserrat"
+                fontWeight={600}
+                fontSize={16}
+                ml={-2}
+                lineHeight={{
+                  lg: "76px",
+                  md: "56px",
+                  sm: "46px",
+                  xs: "36px",
+                }}
+                className="main-title"
+              >
+                Älem Tilsimat
+              </Typography>
+            </Stack>
+          </Stack>
+        </Link>
         <Stack
           direction="row"
           spacing="30px"

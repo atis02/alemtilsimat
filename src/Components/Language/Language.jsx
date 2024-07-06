@@ -48,12 +48,12 @@ export default function Language() {
       : { color: "#fff" };
 
   return (
-    <Box maxWidth={70}>
+    <Box maxWidth={100}>
       <Stack
         cursor="pointer"
         variant="text"
         direction="row"
-        mt={-0.8}
+        mt={{ lg: -0.3, md: -0.3, sm: -0.3, xs: 0 }}
         alignItems="center"
         onClick={handleClick}
         sx={{

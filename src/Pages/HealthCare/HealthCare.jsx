@@ -91,7 +91,7 @@ const HealthCare = () => {
             color="#fff"
             fontWeight={500}
             fontFamily="Montserrat"
-            fontSize={{ lg: 20, md: 18, sm: 18, xs: 16 }}
+            fontSize={{ lg: 18, md: 17, sm: 16, xs: 15 }}
             mb="10px"
           >
             {title}
@@ -100,7 +100,7 @@ const HealthCare = () => {
             color="#DDDDDD"
             fontWeight={300}
             fontFamily="Montserrat"
-            fontSize={{ lg: 18, md: 16, sm: 16, xs: 14 }}
+            fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
             textAlign="justify"
           >
             {desc}
@@ -125,7 +125,7 @@ const HealthCare = () => {
           <Typography
             fontFamily="Montserrat"
             fontWeight={600}
-            fontSize={{ lg: 60, md: 54, sm: 44, xs: 30 }}
+            fontSize={{ lg: 50, md: 45, sm: 40, xs: 30 }}
             lineHeight={{
               lg: "76px",
               md: "56px",
@@ -161,7 +161,7 @@ const HealthCare = () => {
             </Stack>
             <Typography
               color="#DDDDDDDD"
-              fontSize={{ lg: 18, md: 18, sm: 16, xs: 15 }}
+              fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
               lineHeight="27px"
               fontFamily="Montserrat"
               width={{ lg: "60%", md: "60%", sm: "100%", xs: "100%" }}

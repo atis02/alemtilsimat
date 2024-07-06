@@ -36,7 +36,7 @@ const AutoDatabase = () => {
         ...(isMobile
           ? {
               width: "100%",
-              height: "400px",
+              height: index == "2" ? "300px" : "390px",
               ...(index == "1" ? { marginTop: "0px" } : ""),
               ...(index == "2" ? { marginTop: "0px" } : ""),
             }
@@ -48,7 +48,7 @@ const AutoDatabase = () => {
           : isMd
           ? {
               width: "420px",
-              height: "480px",
+              height: "380px",
               ...(index == "2" ? { marginTop: "90px" } : ""),
             }
           : { width: "420px", height: "500px" }),
@@ -64,7 +64,7 @@ const AutoDatabase = () => {
           position="absolute"
           height={{
             lg: 450,
-            md: 470,
+            md: 380,
             sm: 450,
             xs: 320,
           }}
@@ -77,7 +77,7 @@ const AutoDatabase = () => {
           />
           <Stack
             position="absolute"
-            height={{ lg: 450, md: 470, sm: 460, xs: 285 }}
+            height={{ lg: 450, md: 380, sm: 400, xs: 285 }}
             width={{ lg: 420, md: 430, sm: 340, xs: "90%" }}
             mt={2}
             ml={2}
@@ -101,10 +101,10 @@ const AutoDatabase = () => {
         >
           <Stack
             alignItems="start"
-            width={{ lg: 180, md: 180, sm: 180, xs: 100 }}
-            height={{ lg: 200, md: 200, sm: 180, xs: 120 }}
-            mt={{ lg: -14, md: -14, sm: -14, xs: -9 }}
-            ml={{ lg: -7, md: -7, sm: -7, xs: -6 }}
+            width={{ lg: 140, md: 130, sm: 120, xs: 100 }}
+            height={{ lg: 160, md: 150, sm: 140, xs: 120 }}
+            mt={{ lg: -13, md: -10, sm: -10, xs: -9 }}
+            ml={{ lg: -8, md: -7, sm: -7, xs: -6 }}
             position={"absolute"}
           >
             <img
@@ -121,7 +121,7 @@ const AutoDatabase = () => {
             fontFamily="Montserrat"
             fontSize={{ lg: 20, md: 18, sm: 18, xs: 16 }}
             mb="10px"
-            mt={{ lg: 12, md: 12, sm: 9, xs: 5 }}
+            mt={{ lg: 8, md: 10, sm: 9, xs: 5 }}
           >
             {title}
           </Typography>
@@ -129,7 +129,7 @@ const AutoDatabase = () => {
             color="#DDDDDD"
             fontWeight={300}
             fontFamily="Montserrat"
-            fontSize={{ lg: 18, md: 16, sm: 16, xs: 14 }}
+            fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
             textAlign="justify"
           >
             {desc}
@@ -153,7 +153,7 @@ const AutoDatabase = () => {
           <Typography
             fontFamily="Montserrat"
             fontWeight={600}
-            fontSize={{ lg: 50, md: 54, sm: 44, xs: 30 }}
+            fontSize={{ lg: 50, md: 45, sm: 40, xs: 30 }}
             lineHeight={{
               lg: "76px",
               md: "56px",
@@ -189,7 +189,7 @@ const AutoDatabase = () => {
             </Stack>
             <Typography
               color="#DDDDDDDD"
-              fontSize={{ lg: 18, md: 18, sm: 16, xs: 15 }}
+              fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
               lineHeight="27px"
               fontFamily="Montserrat"
               width={{ lg: "61%", md: "60%", sm: "100%", xs: "100%" }}
@@ -224,7 +224,7 @@ const AutoDatabase = () => {
           flexWrap="wrap"
           justifyContent="space-between"
           spacing={{ lg: 0, md: 0, sm: 0, xs: 7 }}
-          mb={4}
+          mb={{ lg: 4, md: 3, sm: 3, xs: 2 }}
         >
           {database.map((service, index) => (
             <Database key={service.title} index={index} {...service} />

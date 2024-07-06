@@ -19,8 +19,8 @@ const About = () => {
         alignItems="center"
       >
         <Stack
-          width={{ lg: 670, md: 600, sm: 500, xs: "95%" }}
-          height={{ lg: 605, md: 505, sm: 405, xs: 325 }}
+          width={{ lg: 570, md: 500, sm: 480, xs: "95%" }}
+          height={{ lg: 505, md: 455, sm: 405, xs: 325 }}
         >
           <img
             src="/images/MainPageImages/ABout2.png"
@@ -28,11 +28,11 @@ const About = () => {
             alt=""
           />
           <Stack
-            width={{ lg: 600, md: 490, sm: 390, xs: 310 }}
-            height={{ lg: 555, md: 375, sm: 305, xs: 285 }}
+            width={{ lg: 450, md: 400, sm: 350, xs: 310 }}
+            height={{ lg: 405, md: 375, sm: 305, xs: 285 }}
             position="absolute"
             zIndex={10}
-            mt={{ lg: 7, md: 9, sm: 5, xs: 5 }}
+            mt={{ lg: 13, md: 9, sm: 5, xs: 5 }}
           >
             <img src="/images/MainPageImages/About.png" alt="" />
           </Stack>
@@ -42,7 +42,7 @@ const About = () => {
             color="#00E0FF"
             fontFamily="Montserrat"
             fontWeight={600}
-            fontSize={{ lg: 60, md: 54, sm: 44, xs: 30 }}
+            fontSize={{ lg: 50, md: 45, sm: 40, xs: 30 }}
             lineHeight={{
               lg: "76px",
               md: "56px",
@@ -56,7 +56,7 @@ const About = () => {
           </Typography>
           <Typography
             color="#DDDDDDDD"
-            fontSize={{ lg: 18, md: 16, sm: 16, xs: 14 }}
+            fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
             lineHeight="27px"
             fontFamily="Montserrat"
             fontWeight={400}

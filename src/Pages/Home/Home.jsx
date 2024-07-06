@@ -40,9 +40,9 @@ const Home = () => {
       >
         <Stack justifyContent="center" alignItems="start">
           <Stack direction="row" alignItems="center" spacing={-2}>
-            <Stack
-              width={{ lg: "190px", md: "180px", sm: "200px", xs: "130px" }}
-              height={{ lg: "208px", md: "188px", sm: "218px", xs: "14  8px" }}
+            {/* <Stack
+              width={{ lg: "170px", md: "180px", sm: "160px", xs: "130px" }}
+              height={{ lg: "188px", md: "188px", sm: "168px", xs: "14  8px" }}
               sx={{
                 display: { lg: "block", md: "block", sm: "block", xs: "none" },
               }}
@@ -52,7 +52,7 @@ const Home = () => {
                 src="/images/Logo.png"
                 alt=""
               />
-            </Stack>
+            </Stack> */}
             <Stack
               direction="row"
               alignItems="center"
@@ -61,8 +61,8 @@ const Home = () => {
               <Typography
                 fontFamily="Montserrat"
                 fontWeight={600}
-                fontSize={{ lg: 74, md: 44, sm: 44, xs: 30 }}
-                ml={{ lg: -10, md: -5, sm: -4, xs: 2.5 }}
+                fontSize={{ lg: 74, md: 44, sm: 40, xs: 30 }}
+                // ml={{ lg: -7, md: -5, sm: -4, xs: 2.5 }}
                 lineHeight={{
                   lg: "78px",
                   md: "76px",
@@ -146,8 +146,8 @@ const Home = () => {
           </Stack>
         </Stack>
         <Stack
-          width={{ lg: 700, md: 490, sm: 390, xs: 190 }}
-          height={{ lg: 700, md: 375, sm: 305, xs: 145 }}
+          width={{ lg: 600, md: 490, sm: 390, xs: 190 }}
+          height={{ lg: 600, md: 375, sm: 305, xs: 145 }}
           sx={{
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
           }}

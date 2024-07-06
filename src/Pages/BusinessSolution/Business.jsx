@@ -41,28 +41,28 @@ const Business = () => {
           : isTablet
           ? { width: "360px", height: "100%" }
           : isMd
-          ? { width: "420px", height: "480px" }
+          ? { width: "450px", height: "650px" }
           : { width: "410px", height: "100%" }),
       }}
       options={{
         scale: isMobile ? "none" : 1,
-        max: 45,
+        max: 20,
         perspective: 1000,
       }}
     >
       <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
         <Stack
-          ml={{ lg: 8, md: 10, sm: 6, xs: 13 }}
-          height={{ lg: 220, md: 200, sm: 180, xs: 110 }}
+          ml={{ lg: 12, md: 15, sm: 9, xs: 13 }}
+          height={{ lg: 150, md: 140, sm: 130, xs: 100 }}
           alignItems="center"
-          mt={{ lg: -15, md: -15, sm: -11, xs: -7 }}
+          mt={{ lg: -9, md: -9, sm: -9, xs: -7 }}
           position="absolute"
         >
           <img
             src={img}
             alt="web-development"
             className="w-16 h-16 object-contain"
-            style={{ width: "100%", height: "100%" }}
+            style={{ height: "100%" }}
           />
         </Stack>
         <Stack
@@ -92,7 +92,7 @@ const Business = () => {
             color="#DDDDDD"
             fontWeight={300}
             fontFamily="Montserrat"
-            fontSize={{ lg: 18, md: 16, sm: 16, xs: 14 }}
+            fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
             textAlign="justify"
           >
             {desc}
@@ -115,7 +115,7 @@ const Business = () => {
           <Typography
             fontFamily="Montserrat"
             fontWeight={600}
-            fontSize={{ lg: 60, md: 54, sm: 44, xs: 30 }}
+            fontSize={{ lg: 50, md: 45, sm: 40, xs: 30 }}
             lineHeight={{
               lg: "76px",
               md: "56px",
@@ -151,11 +151,12 @@ const Business = () => {
             </Stack>
             <Typography
               color="#DDDDDDDD"
-              fontSize={{ lg: 18, md: 18, sm: 16, xs: 15 }}
+              fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
               lineHeight="27px"
               fontFamily="Montserrat"
               width={{ lg: "61%", md: "60%", sm: "100%", xs: "100%" }}
               fontWeight={400}
+              mb={3}
               textAlign={{
                 lg: "center",
                 md: "center",
