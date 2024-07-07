@@ -1,12 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home/Home";
 import Navbar from "./Components/Navbar/Navbar";
-import { Suspense, useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { slideIn } from "./Utils/motion";
-import { CanvasLoader } from "./Components/Canvas";
-import About from "./Pages/About/About";
+import { useEffect, useState } from "react";
 import MainLayout from "./Components/Layout/MainLayout";
 import Footer from "./Pages/Footer/Footer";
 import Contacts from "./Pages/Contacts/Contacts";

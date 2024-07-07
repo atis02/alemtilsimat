@@ -42,7 +42,7 @@ const Business = () => {
           ? { width: "360px", height: "100%" }
           : isMd
           ? { width: "450px", height: "650px" }
-          : { width: "410px", height: "100%" }),
+          : { width: "440px", height: "100%" }),
       }}
       options={{
         scale: isMobile ? "none" : 1,
@@ -58,17 +58,12 @@ const Business = () => {
           mt={{ lg: -9, md: -9, sm: -9, xs: -7 }}
           position="absolute"
         >
-          <img
-            src={img}
-            alt="web-development"
-            className="w-16 h-16 object-contain"
-            style={{ height: "100%" }}
-          />
+          <img src={img} alt="web-development" style={{ height: "100%" }} />
         </Stack>
         <Stack
           width={{ lg: "100%", md: "100%", sm: "90%", xs: "100%" }}
           height={{
-            lg: "100%",
+            lg: i18n.language === "ru" ? "550px" : "500px",
             md: 580,
             sm: "100%",
             xs: "100%",

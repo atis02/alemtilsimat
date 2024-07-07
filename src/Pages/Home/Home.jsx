@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
-import { motion } from "framer-motion";
 
-import { styles } from "../../styles";
 import { SectionWrapper } from "../../Hoc";
-import { slideIn } from "../../Utils/motion";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
 import { useTranslation } from "react-i18next";
@@ -40,19 +37,6 @@ const Home = () => {
       >
         <Stack justifyContent="center" alignItems="start">
           <Stack direction="row" alignItems="center" spacing={-2}>
-            {/* <Stack
-              width={{ lg: "170px", md: "180px", sm: "160px", xs: "130px" }}
-              height={{ lg: "188px", md: "188px", sm: "168px", xs: "14  8px" }}
-              sx={{
-                display: { lg: "block", md: "block", sm: "block", xs: "none" },
-              }}
-            >
-              <img
-                style={{ width: "auto", height: "100%" }}
-                src="/images/Logo.png"
-                alt=""
-              />
-            </Stack> */}
             <Stack
               direction="row"
               alignItems="center"
@@ -62,7 +46,6 @@ const Home = () => {
                 fontFamily="Montserrat"
                 fontWeight={600}
                 fontSize={{ lg: 74, md: 44, sm: 40, xs: 30 }}
-                // ml={{ lg: -7, md: -5, sm: -4, xs: 2.5 }}
                 lineHeight={{
                   lg: "78px",
                   md: "76px",
@@ -131,16 +114,7 @@ const Home = () => {
                 navigate("/demo");
               }}
             >
-              {/* <Typography
-                  color="#00E0FF"
-                  fontWeight={600}
-                  fontSize={{ lg: 20, md: 18, sm: 16, xs: 15 }}
-                  sx={{
-                    "&:hover": { color: "#114896" },
-                  }}
-                > */}{" "}
               {t("explore")}
-              {/* </Typography> */}
               <EastIcon />
             </Button>
           </Stack>

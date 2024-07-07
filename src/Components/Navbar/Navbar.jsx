@@ -60,7 +60,7 @@ const Navbar = () => {
     >
       <Stack
         direction="row"
-        pr={{ lg: "50px", md: "10px", sm: "0px", xs: "20px" }}
+        pr={{ lg: "20px", md: "10px", sm: "0px", xs: "20px" }}
         pl={{ lg: "80px", md: "40px", sm: "30px", xs: "20px" }}
         alignItems="center"
         justifyContent="space-between"
