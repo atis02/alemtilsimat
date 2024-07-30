@@ -33,17 +33,20 @@ const Business = () => {
   ];
   const BusinessCard = ({ index, title, img, desc }) => (
     <Stack
-      style={{
-        ...(isMobile
-          ? {
-              width: "100%",
-            }
-          : isTablet
-          ? { width: "360px", height: "100%" }
-          : isMd
-          ? { width: "450px", height: "650px" }
-          : { width: "32%", height: "100%" }),
-      }}
+      // style={{
+      //   ...(isMobile
+      //     ? {
+      //         width: "100%",
+      //       }
+      //     : isTablet
+      //     ? { width: "360px", height: "100%" }
+      //     : isMd
+      //     ? { width: "450px", height: "650px" }
+      //     : { width: "32%", height: "100%" }),
+      // }}
+      width={{ lg: "32%", md: "32%", sm: "50%", xs: "100%" }}
+      height="100%"
+      pr={{ lg: 0, md: 2, sm: 0, xs: 0 }}
     >
       <Tilt
         options={{
@@ -54,7 +57,7 @@ const Business = () => {
       >
         <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
           <Stack
-            ml={{ lg: 12, md: 15, sm: 9, xs: 14 }}
+            ml={{ lg: 12, md: 8, sm: 13, xs: 14 }}
             height={{ lg: 150, md: 140, sm: 130, xs: 100 }}
             alignItems="center"
             mt={{ lg: -9, md: -9, sm: -9, xs: -7 }}
@@ -64,15 +67,16 @@ const Business = () => {
           </Stack>
           <Stack
             width={{ lg: "100%", md: "100%", sm: "90%", xs: "100%" }}
-            height={{
-              lg: i18n.language === "ru" ? "550px" : "500px",
-              md: 580,
+            minHeight={{
+              lg: i18n.language === "ru" ? "570px" : "500px",
+              md: "100%",
               sm: "100%",
               xs: "100%",
             }}
             p={{ lg: "20px", md: "20px", sm: "20px", xs: "20px" }}
             border="5px solid #00E0FF"
             borderRadius="20px"
+            className="inner-border"
             mb={7}
           >
             <Typography
@@ -181,7 +185,7 @@ const Business = () => {
         </Stack>
         <Stack
           mt="70px"
-          direction={{ lg: "row", dm: "row", sm: "row", xs: "column" }}
+          direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
           flexWrap="wrap"
           justifyContent="space-between"
         >
