@@ -63,3 +63,75 @@
 .active .tocka{
   display: flex;
 }
+
+.button {
+  padding:0 1rem;
+  position: relative;
+ max-width: 273px;
+ border-radius: 25px;
+ border: "none";
+
+  min-height: 60px;
+  margin-top: 30px;
+}
+
+.button-text {
+ position: absolute;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ background:#04101c;
+ /* background:linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,224,255,1) 100%); */
+ border: "none";
+ border-radius: 25px;
+ max-width: 273px;
+ color: #00E0FF;
+font-weight:600;
+font-size: 20px;
+ text-transform: initial;
+ height: 60;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+ gap: 10px;
+}
+
+.button-background {
+ position: absolute;
+ top: -1px;
+ right: 1px;
+ bottom: 1px;
+ border: "none";
+ left: 1px;
+  border-radius: 45px;
+ background: linear-gradient(-90deg, #007cf0, #00dfd8,#00a8f7,#fff,#ff0080, #007cf0);
+ background-size: 400% 100%;
+ padding: 0;
+ margin: 0;
+ animation: backgroundAnimation 8s ease-in-out infinite
+}
+
+
+@keyframes backgroundAnimation {
+ 50% {
+  background-position: 140% 50%;
+  transform: skew(-2deg)
+ }
+}
+
+.button-background:after {
+ content: "";
+ position: absolute;
+ background-size: inherit;
+ background-image: inherit;
+ -webkit-animation: inherit;
+ animation: inherit;
+ border: "none";
+ left: 0;
+ right: 0;
+ top: 6px;
+ height: 80%;
+ filter: blur(.7rem)
+}

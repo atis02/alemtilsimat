@@ -32,7 +32,7 @@ const Business = () => {
     },
   ];
   const BusinessCard = ({ index, title, img, desc }) => (
-    <Tilt
+    <Stack
       style={{
         ...(isMobile
           ? {
@@ -42,59 +42,62 @@ const Business = () => {
           ? { width: "360px", height: "100%" }
           : isMd
           ? { width: "450px", height: "650px" }
-          : { width: "440px", height: "100%" }),
-      }}
-      options={{
-        scale: isMobile ? "none" : 1,
-        max: 20,
-        perspective: 1000,
+          : { width: "32%", height: "100%" }),
       }}
     >
-      <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
-        <Stack
-          ml={{ lg: 12, md: 15, sm: 9, xs: 13 }}
-          height={{ lg: 150, md: 140, sm: 130, xs: 100 }}
-          alignItems="center"
-          mt={{ lg: -9, md: -9, sm: -9, xs: -7 }}
-          position="absolute"
-        >
-          <img src={img} alt="web-development" style={{ height: "100%" }} />
-        </Stack>
-        <Stack
-          width={{ lg: "100%", md: "100%", sm: "90%", xs: "100%" }}
-          height={{
-            lg: i18n.language === "ru" ? "550px" : "500px",
-            md: 580,
-            sm: "100%",
-            xs: "100%",
-          }}
-          p={{ lg: "20px", md: "20px", sm: "20px", xs: "20px" }}
-          border="5px solid #00E0FF"
-          borderRadius="20px"
-          mb={7}
-        >
-          <Typography
-            color="#fff"
-            fontWeight={500}
-            fontFamily="Montserrat"
-            fontSize={{ lg: 20, md: 18, sm: 18, xs: 16 }}
-            mb="10px"
-            mt={{ lg: 10, md: 10, sm: 10, xs: 4 }}
+      <Tilt
+        options={{
+          scale: isMobile ? "none" : 1,
+          max: 20,
+          perspective: 1000,
+        }}
+      >
+        <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
+          <Stack
+            ml={{ lg: 12, md: 15, sm: 9, xs: 14 }}
+            height={{ lg: 150, md: 140, sm: 130, xs: 100 }}
+            alignItems="center"
+            mt={{ lg: -9, md: -9, sm: -9, xs: -7 }}
+            position="absolute"
           >
-            {title}
-          </Typography>
-          <Typography
-            color="#DDDDDD"
-            fontWeight={300}
-            fontFamily="Montserrat"
-            fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
-            textAlign="justify"
+            <img src={img} alt="web-development" style={{ height: "100%" }} />
+          </Stack>
+          <Stack
+            width={{ lg: "100%", md: "100%", sm: "90%", xs: "100%" }}
+            height={{
+              lg: i18n.language === "ru" ? "550px" : "500px",
+              md: 580,
+              sm: "100%",
+              xs: "100%",
+            }}
+            p={{ lg: "20px", md: "20px", sm: "20px", xs: "20px" }}
+            border="5px solid #00E0FF"
+            borderRadius="20px"
+            mb={7}
           >
-            {desc}
-          </Typography>
-        </Stack>
-      </motion.div>
-    </Tilt>
+            <Typography
+              color="#fff"
+              fontWeight={500}
+              fontFamily="Montserrat"
+              fontSize={{ lg: 20, md: 18, sm: 18, xs: 16 }}
+              mb="10px"
+              mt={{ lg: 10, md: 10, sm: 10, xs: 4 }}
+            >
+              {title}
+            </Typography>
+            <Typography
+              color="#DDDDDD"
+              fontWeight={300}
+              fontFamily="Montserrat"
+              fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
+              textAlign="justify"
+            >
+              {desc}
+            </Typography>
+          </Stack>
+        </motion.div>
+      </Tilt>
+    </Stack>
   );
   return (
     <Box
@@ -151,7 +154,7 @@ const Business = () => {
               fontFamily="Montserrat"
               width={{ lg: "61%", md: "60%", sm: "100%", xs: "100%" }}
               fontWeight={400}
-              mb={3}
+              mb={{ lg: 3, md: 3, sm: 2, xs: 0 }}
               textAlign={{
                 lg: "center",
                 md: "center",

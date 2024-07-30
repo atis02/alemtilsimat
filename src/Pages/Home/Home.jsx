@@ -31,11 +31,11 @@ const Home = () => {
           alignItems: "center",
           width: "100%",
           height: "100%",
-          mt: { xs: "11.5%", lg: 0, md: 0, sm: 0 },
+          mt: { xs: "20.5%", lg: 0, md: 0, sm: 0 },
         }}
         direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
       >
-        <Stack justifyContent="center" alignItems="start">
+        <Stack justifyContent="center" alignItems="start" minWidth="50%">
           <Stack direction="row" alignItems="center" spacing={-2}>
             <Stack
               direction="row"
@@ -92,16 +92,17 @@ const Home = () => {
                   lg: "26px",
                   md: "20px",
                   sm: "15px",
-                  xs: "15px",
+                  xs: "9px",
                 },
-                maxWidth: { lg: 273, md: 243, sm: 200, xs: 203 },
+                maxWidth: { lg: 273, md: 243, sm: 200, xs: 173 },
                 textTransform: "initial",
-                height: 60,
+                height: { lg: 60, md: 60, sm: 50, xs: 50 },
                 display: "flex",
                 gap: "10px",
                 fontSize: { lg: 20, md: 18, sm: 16, xs: 15 },
                 fontWeight: 600,
-                mt: "30px",
+                lineHeight: "20px",
+                mt: { lg: "30px", md: "20px", sm: "20px", xs: "20px" },
                 transition: "all ease 0.4s",
                 "&:hover": {
                   gap: "17px",
@@ -117,16 +118,38 @@ const Home = () => {
               {t("explore")}
               <EastIcon />
             </Button>
+            {/* <span
+              className="button"
+              onClick={() => {
+                navigate("/demo");
+              }}
+            >
+              <span className="button-background"></span>
+              <span className="button-text">
+                {" "}
+                {t("explore")}
+                <EastIcon />
+              </span>
+            </span> */}
           </Stack>
         </Stack>
-        <Stack
-          width={{ lg: 600, md: 490, sm: 390, xs: 190 }}
-          height={{ lg: 600, md: 375, sm: 305, xs: 145 }}
-          sx={{
-            display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
-          }}
-        >
-          <img src="/images/MainPageImages/about3.png" alt="" />
+        <Stack minWidth={190} maxWidth={600}>
+          <Stack
+            // width={{ lg: 600, md: 490, sm: 390, xs: 190 }}
+            // height={{ lg: 600, md: 375, sm: 305, xs: 145 }}
+            width="100%"
+            // maxWidth={600}
+            height="100%"
+            sx={{
+              display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+            }}
+          >
+            <img
+              src="/images/MainPageImages/about3.png"
+              style={{ width: "auto", height: "auto" }}
+              alt=""
+            />
+          </Stack>
         </Stack>
       </Stack>
     </Box>

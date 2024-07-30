@@ -34,7 +34,7 @@ export const resources = {
       businessTextTitle: "E-commerce",
       businessManagament: "Business Management",
       businessManagamentText:
-        "Finance & Accounting It`s the control center for your money, tracking income and expenses to ensure financial health and inform smart decisions. <1/><1/> - Documentation automation <1/>Overall, Documentation Automation helps businesses operate more efficiently, accurately, and cost-effectively. <1/><1/> - Human resurces <1/>It`s all about attracting, developing, and retaining top talent to achieve company goals.",
+        "Finance & Accounting It`s the control center for your money, tracking income and expenses to ensure financial health and inform smart decisions. <1/><1/> - Documentation automation <1/>Overall, Documentation Automation helps businesses operate more efficiently, accurately, and cost-effectively. <1/><1/> - Human resources <1/>It`s all about attracting, developing, and retaining top talent to achieve company goals.",
       industry: "Industry",
       industryText:
         " - Process management <1/>Process management helps businesses in any industry function smoother, achieve better results, and gain a competitive edge.<1/><1/> - Stock management<1/>Stock management, vital across industries, ensures having the right amount of stock at the right time.<1/><1/> - Project management<1/>It involves planning, execution, and control of tasks to deliver projects on time, within budget.",

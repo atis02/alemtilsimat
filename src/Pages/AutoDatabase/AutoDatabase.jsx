@@ -121,7 +121,7 @@ const AutoDatabase = () => {
             fontFamily="Montserrat"
             fontSize={{ lg: 20, md: 18, sm: 18, xs: 16 }}
             mb="10px"
-            mt={{ lg: 8, md: 10, sm: 9, xs: 5 }}
+            mt={{ lg: 8, md: 10, sm: 9, xs: 6 }}
           >
             {title}
           </Typography>
