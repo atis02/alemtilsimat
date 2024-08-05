@@ -85,69 +85,50 @@ const Home = () => {
               {t("homeTitle")}
             </Typography>
             <Button
-              sx={{
-                color: "#00E0FF",
-                border: "2px solid #00E0FF",
-                borderRadius: {
-                  lg: "26px",
-                  md: "20px",
-                  sm: "15px",
-                  xs: "9px",
-                },
-                maxWidth: { lg: 273, md: 243, sm: 200, xs: 173 },
-                textTransform: "initial",
-                height: { lg: 60, md: 60, sm: 50, xs: 50 },
-                display: "flex",
-                gap: "10px",
-                fontSize: { lg: 20, md: 18, sm: 16, xs: 15 },
-                fontWeight: 600,
-                lineHeight: "20px",
-                mt: { lg: "30px", md: "20px", sm: "20px", xs: "20px" },
-                transition: "all ease 0.4s",
-                "&:hover": {
-                  gap: "17px",
-                  background:
-                    "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,224,255,1) 100%)",
-                  color: "#114896",
-                },
-              }}
-              onClick={() => {
-                navigate("/demo");
-              }}
-            >
-              {t("explore")}
-              <EastIcon />
-            </Button>
-            {/* <span
               className="button"
               onClick={() => {
                 navigate("/demo");
               }}
+              sx={{
+                mt: { lg: "30px", md: "20px", sm: "20px", xs: "20px" },
+
+                maxWidth: { lg: 273, md: 243, sm: 200, xs: 173 },
+              }}
             >
               <span className="button-background"></span>
-              <span className="button-text">
+              <Typography
+                className="button-text"
+                sx={{
+                  fontSize: { lg: 20, md: 18, sm: 16, xs: 15 },
+                  fontWeight: 600,
+                  lineHeight: "20px",
+                }}
+              >
                 {" "}
                 {t("explore")}
                 <EastIcon />
-              </span>
-            </span> */}
+              </Typography>
+            </Button>
           </Stack>
         </Stack>
         <Stack minWidth={190} maxWidth={600}>
           <Stack
-            // width={{ lg: 600, md: 490, sm: 390, xs: 190 }}
-            // height={{ lg: 600, md: 375, sm: 305, xs: 145 }}
             width="100%"
-            // maxWidth={600}
             height="100%"
             sx={{
               display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
             }}
           >
             <img
-              src="/images/MainPageImages/about3.png"
-              style={{ width: "auto", height: "auto" }}
+              src="/images/MainPageImages/cropped_image.png"
+              style={{
+                width: "auto",
+                height: "auto",
+                borderRadius: "100%",
+                border: "1px solid #00E0FF",
+              }}
               alt=""
+              className="img-gradient"
             />
           </Stack>
         </Stack>

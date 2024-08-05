@@ -114,6 +114,7 @@ const Login = () => {
           >
             <TextField
               onChange={(e) => setEmail(e.target.value)}
+              autoComplete="off"
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -154,6 +155,7 @@ const Login = () => {
             <TextField
               onChange={(e) => setPassword(e.target.value)}
               type={showPassword ? "text" : "password"}
+              autoComplete="off"
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
