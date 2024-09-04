@@ -14,10 +14,11 @@ const Business = () => {
 
   const BusinessData = [
     {
-      img: "/images/MainPageImages/business.png",
-      title: t("businessTextTitle"),
-      desc: <Trans i18nKey={"businessText"} components={{ 1: <br /> }} />,
+      img: "/images/MainPageImages/business2.png",
+      title: t("industry"),
+      desc: <Trans i18nKey={"industryText"} components={{ 1: <br /> }} />,
     },
+
     {
       img: "/images/MainPageImages/business1.png",
       title: t("businessManagament"),
@@ -26,9 +27,9 @@ const Business = () => {
       ),
     },
     {
-      img: "/images/MainPageImages/business2.png",
-      title: t("industry"),
-      desc: <Trans i18nKey={"industryText"} components={{ 1: <br /> }} />,
+      img: "/images/MainPageImages/business.png",
+      title: t("businessTextTitle"),
+      desc: <Trans i18nKey={"businessText"} components={{ 1: <br /> }} />,
     },
   ];
   const BusinessCard = ({ index, title, img, desc }) => (

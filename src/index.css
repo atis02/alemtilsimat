@@ -9,6 +9,7 @@
 @font-face {
   font-family: Montserrat;
   src: url(/Montserrat-VariableFont_wght.ttf);
+  font-display: swap;
 }
 ::selection{
   background-color:rgba(0,224,255,1);
@@ -113,13 +114,6 @@ font-size: 20px;
  padding: 0;
  margin: 0;
  animation: backgroundAnimation 1000s ease-in-out infinite
-}
-.img-gradient{
-
-  box-shadow: 
-  0px 0px 55px 10px #375c61;
-
-
 }
 .button-background {
  position: absolute;

@@ -125,10 +125,10 @@ const Home = () => {
                 width: "auto",
                 height: "auto",
                 borderRadius: "100%",
-                border: "1px solid #00E0FF",
+                // border: "1px solid #00E0FF",
               }}
               alt=""
-              className="img-gradient"
+              // className="img-gradient"
             />
           </Stack>
         </Stack>

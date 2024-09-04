@@ -8,7 +8,7 @@ export const resources = {
       demo: "Demo",
       contact: "Contacts",
       vacancy: "Vacancies",
-      adress: "Adress",
+      adress: "Address",
       adress2: "Ashgabat, Garaşsyzlyk Avenue 49/1",
       number: "Number",
       officeNumber: "Office: (+993 12) 48 66 40",

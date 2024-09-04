@@ -145,7 +145,8 @@ const AutoDatabase = () => {
         pr: { lg: "80px", md: "40px", sm: "20px", xs: "20px" },
         pl: { lg: "80px", md: "40px", sm: "20px", xs: "20px" },
         mt: "50px",
-        pb: "50px",
+        pb: "10px",
+        borderBottom: "1px solid gray",
       }}
     >
       <Stack>
