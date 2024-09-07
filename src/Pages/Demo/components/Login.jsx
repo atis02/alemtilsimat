@@ -50,7 +50,6 @@ const Login = () => {
       toast.error("Dogry maglumatyňyzy giriziň!"), setLoading(false);
     }
   };
-  console.log(password);
   return (
     <Box
       sx={{
@@ -114,7 +113,7 @@ const Login = () => {
           >
             <TextField
               onChange={(e) => setEmail(e.target.value)}
-              autoComplete="off"
+              autocomplete="off"
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -151,11 +150,13 @@ const Login = () => {
               }}
               variant="standard"
               label={t("email")}
+              name="custom-email" // Use unique name
+              id="custom-email"
             ></TextField>
             <TextField
               onChange={(e) => setPassword(e.target.value)}
               type={showPassword ? "text" : "password"}
-              autoComplete="off"
+              autocomplete="new-password"
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -194,6 +195,8 @@ const Login = () => {
               }}
               variant="standard"
               label={t("password")}
+              name="custom-password" // Use unique name
+              id="custom-password"
             ></TextField>
 
             <Stack alignItems="center" pt="20px">

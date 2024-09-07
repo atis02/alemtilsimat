@@ -20,6 +20,19 @@
   border-radius: 7px;
 
 }
+/* Apply styles to autofilled fields */
+input:-webkit-autofill {
+  background-color: #04101C !important; /* Change background color */
+  -webkit-text-fill-color: #A1A195 !important; /* Change text color */
+  box-shadow: 0 0 0px 1000px #04101C inset !important; /* Remove shadow */
+}
+
+/* Styles for Firefox */
+input:-moz-autofill {
+  background-color: #A1A195 !important; /* Change background color */
+  color: #A1A195 !important; /* Change text color */
+}
+
 ::-webkit-scrollbar {
   width: 7px;
   background-color: #04101c;

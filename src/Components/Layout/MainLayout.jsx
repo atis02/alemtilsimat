@@ -12,8 +12,8 @@ const MainLayout = () => {
       <Home />
       <About />
       <AutoDatabase />
-      <Business />
       <HealthCare />
+      <Business />
     </Box>
   );
 };

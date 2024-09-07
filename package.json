@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
+    "@rollup/plugin-terser": "^0.4.4",
     "framer-motion": "^11.2.10",
     "i18next": "^23.11.5",
     "maath": "^0.10.7",
@@ -24,7 +25,8 @@
     "react-router-dom": "^6.23.1",
     "react-spinners": "^0.14.1",
     "react-tilt": "^1.0.2",
-    "react-toastify": "^10.0.5"
+    "react-toastify": "^10.0.5",
+    "rollup-plugin-terser": "^7.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

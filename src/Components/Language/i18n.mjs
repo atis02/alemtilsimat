@@ -31,7 +31,7 @@ export const resources = {
         "Maximize your business potential and drive growth with our innovative IT solution, designed to streamline your operations, optimize your workflows, and deliver measurable results.",
       businessText:
         "- Web site <1/>It`s where visitors browse products, learn about your brand, and ultimately make purchases.<1/><1/> - Mobile app <1/>Mobile apps can provide a more personalized experience with features like push notifications, wishlists, and faster checkout.<1/><1/> - Marketplace<1/>The marketplace model can significantly boost sales and brand reach for both the platform and its vendors.",
-      businessTextTitle: "E-commerce",
+      businessTextTitle: "Online Marketplace",
       businessManagament: "Business Management",
       businessManagamentText:
         "Finance & Accounting It`s the control center for your money, tracking income and expenses to ensure financial health and inform smart decisions. <1/><1/> - Documentation automation <1/>Overall, Documentation Automation helps businesses operate more efficiently, accurately, and cost-effectively. <1/><1/> - Human resources <1/>It`s all about attracting, developing, and retaining top talent to achieve company goals.",
