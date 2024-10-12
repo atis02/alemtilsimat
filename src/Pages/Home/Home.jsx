@@ -111,7 +111,7 @@ const Home = () => {
             </Button>
           </Stack>
         </Stack>
-        <Stack minWidth={190} maxWidth={600}>
+        {/* <Stack minWidth={190} maxWidth={600}>
           <Stack
             width="100%"
             height="100%"
@@ -131,7 +131,7 @@ const Home = () => {
               // className="img-gradient"
             />
           </Stack>
-        </Stack>
+        </Stack> */}
       </Stack>
     </Box>
   );

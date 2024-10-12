@@ -14,6 +14,9 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
+    "@react-three/drei": "^9.114.3",
+    "@react-three/fiber": "^8.17.10",
+    "@react-three/postprocessing": "^2.16.3",
     "@rollup/plugin-terser": "^0.4.4",
     "framer-motion": "^11.2.10",
     "i18next": "^23.11.5",
@@ -26,7 +29,9 @@
     "react-spinners": "^0.14.1",
     "react-tilt": "^1.0.2",
     "react-toastify": "^10.0.5",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "three": "^0.169.0",
+    "three-stdlib": "^2.33.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
