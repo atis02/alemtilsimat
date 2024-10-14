@@ -105,7 +105,7 @@ export function Galaxy(props) {
     );
   };
   return (
-    <Stack position="absolute" top={{lg:0,md:0,sm:0,xs:300}}   zIndex={10} width="100%" height={{lg:"100%",md:"100%",sm:"100%",xs:"50%"}}>
+    <Stack position="absolute" top={{lg:0,md:0,sm:0,xs:0}}   zIndex={10} width="100%" height={{lg:"100%",md:"100%",sm:"100%",xs:"100%"}}>
       <Canvas
         frameloop="always"
         shadows

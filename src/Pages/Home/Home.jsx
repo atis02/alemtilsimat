@@ -31,7 +31,7 @@ const Home = () => {
           alignItems: "center",
           width: "100%",
           height: "100%",
-          mt: { xs: "-10%", lg: 0, md: 0, sm: 0 },
+          mt: { xs: "10%", lg: 0, md: 0, sm: 0 },
         }}
         direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
       >
@@ -41,6 +41,7 @@ const Home = () => {
               direction="row"
               alignItems="center"
               pb={{ lg: 0, md: 0, sm: 0, xs: 2 }}
+
             >
               <Typography
                 fontFamily="Montserrat"
@@ -59,6 +60,7 @@ const Home = () => {
                   xs: "center",
                 }}
                 className="main-title"
+                width={{xs:'400px'}}
               >
                 Älem Tilsimat
               </Typography>
@@ -74,13 +76,14 @@ const Home = () => {
               </Stack> */}
             </Stack>
           </Stack>
-          <Stack>
+          <Stack alignItems='center' >
             <Typography
               color="#dddddd"
               maxWidth={750}
               fontFamily="Montserrat"
               fontSize={{ lg: 20, md: 18, sm: 16, xs: 15 }}
               // mt={{ lg: "30px", md: "30px", sm: "30px", xs: "20px" }}
+              textAlign='center'
             >
               {t("homeTitle")}
             </Typography>
@@ -90,9 +93,8 @@ const Home = () => {
                 navigate("/demo");
               }}
               sx={{
-                mt: { lg: "30px", md: "20px", sm: "20px", xs: "20px" },
-
-                maxWidth: { lg: 273, md: 243, sm: 200, xs: 173 },
+                mt: { lg: "30px", md: "20px", sm: "20px", xs: "220px" },
+                width: { lg: 273, md: 243, sm: 200, xs: 233 },
               }}
             >
               <span className="button-background"></span>
@@ -100,8 +102,9 @@ const Home = () => {
                 className="button-text"
                 sx={{
                   fontSize: { lg: 20, md: 18, sm: 16, xs: 15 },
-                  fontWeight: 600,
+                  fontWeight: 500,
                   lineHeight: "20px",
+                  fontFamily:'Montserrat'
                 }}
               >
                 {" "}
