@@ -31,7 +31,7 @@ const Home = () => {
           alignItems: "center",
           width: "100%",
           height: "100%",
-          mt: { xs: "20.5%", lg: 0, md: 0, sm: 0 },
+          mt: { xs: "-10%", lg: 0, md: 0, sm: 0 },
         }}
         direction={{ lg: "row", md: "row", sm: "row", xs: "column" }}
       >
@@ -40,7 +40,7 @@ const Home = () => {
             <Stack
               direction="row"
               alignItems="center"
-              pb={{ lg: 0, md: 0, sm: 0, xs: 3 }}
+              pb={{ lg: 0, md: 0, sm: 0, xs: 2 }}
             >
               <Typography
                 fontFamily="Montserrat"
@@ -62,7 +62,7 @@ const Home = () => {
               >
                 Älem Tilsimat
               </Typography>
-              <Stack
+              {/* <Stack
                 width={{ lg: 700, md: 490, sm: 390, xs: 190 }}
                 height={{ lg: 700, md: 375, sm: 305, xs: 145 }}
                 sx={{
@@ -71,7 +71,7 @@ const Home = () => {
                 mt={-5}
               >
                 <img src="/images/MainPageImages/about3.png" alt="" />
-              </Stack>
+              </Stack> */}
             </Stack>
           </Stack>
           <Stack>
@@ -80,7 +80,7 @@ const Home = () => {
               maxWidth={750}
               fontFamily="Montserrat"
               fontSize={{ lg: 20, md: 18, sm: 16, xs: 15 }}
-              mt={{ lg: "30px", md: "30px", sm: "30px", xs: "20px" }}
+              // mt={{ lg: "30px", md: "30px", sm: "30px", xs: "20px" }}
             >
               {t("homeTitle")}
             </Typography>

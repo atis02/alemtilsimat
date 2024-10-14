@@ -17,8 +17,7 @@ export function Galaxy(props) {
     nodes.Object_2.geometry.center();
     const positions = new Float32Array(nodes.Object_2.geometry.attributes.position.array.buffer);
     const colors = new Float32Array(positions.length);
-    
-    
+
 
     const getDistanceToCenter = (x, y, z) => Math.sqrt(x * x + y * y + z * z);
     // useEffect(() => {
@@ -106,7 +105,7 @@ export function Galaxy(props) {
     );
   };
   return (
-    <Stack position="absolute" top={0}  zIndex={10} width="100%" height="100%">
+    <Stack position="absolute" top={{lg:0,md:0,sm:0,xs:300}}   zIndex={10} width="100%" height={{lg:"100%",md:"100%",sm:"100%",xs:"50%"}}>
       <Canvas
         frameloop="always"
         shadows
@@ -116,20 +115,12 @@ export function Galaxy(props) {
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
-          //  autoRotate
-          //  autoRotateSpeed={0.1} // Adjust the speed to your preference
-          //  enableZoom={false}
-          //  minAzimuthAngle={0} // Restrict horizontal rotation to simulate a clock-like rotation
-          //  maxAzimuthAngle={Math.PI*2 } // 90-degree rotation (π/2 radians)
-          // //  maxPolarAngle={Math.PI / 2} // Limit the vertical rotation to half sphere
-          // //  minPolarAngle={Math.PI / 2}
-          // //  minAzimuthAngle={0} // Restrict horizontal rotation to simulate a clock-like rotation
-          // //  maxAzimuthAngle={Math.PI * 2} // Full circle rotation for the clock effect
+         
           autoRotate
-          autoRotateSpeed={0.1} // Adjust the speed to your preference
+          autoRotateSpeed={0.1} 
           enableZoom={false}
-          minAzimuthAngle={90} // Allow full horizontal rotation
-          maxAzimuthAngle={Math.PI * 4} // Full 360° horizontal rotation
+          minAzimuthAngle={90} 
+          maxAzimuthAngle={Math.PI * 4}
           />
           <MyGalaxy />
         </Suspense>
@@ -139,3 +130,8 @@ export function Galaxy(props) {
 }
 
 useGLTF.preload("/space/galaxy.glb");
+
+
+
+
+
