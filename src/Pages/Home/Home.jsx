@@ -60,7 +60,8 @@ const Home = () => {
                   xs: "center",
                 }}
                 className="main-title"
-                width={{xs:'400px'}}
+                width={{lg:'100%',xs:'400px'}}
+                mb={{lg:'20px',xs:0}}
               >
                 Älem Tilsimat
               </Typography>
@@ -76,7 +77,7 @@ const Home = () => {
               </Stack> */}
             </Stack>
           </Stack>
-          <Stack alignItems='center' >
+          <Stack alignItems={{lg:'start',md:'start',sm:'start',xs:'center'}} >
             <Typography
               color="#dddddd"
               maxWidth={750}
@@ -135,6 +136,7 @@ const Home = () => {
             />
           </Stack>
         </Stack> */}
+        <img src="/space/star.png" alt="" />
       </Stack>
     </Box>
   );

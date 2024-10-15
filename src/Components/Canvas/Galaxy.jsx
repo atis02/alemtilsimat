@@ -20,19 +20,7 @@ export function Galaxy(props) {
 
 
     const getDistanceToCenter = (x, y, z) => Math.sqrt(x * x + y * y + z * z);
-    // useEffect(() => {
-    //   // Cleanup function to dispose of geometry and texture
-    //   return () => {
-    //     if (nodes?.Object_2?.geometry) {
-    //       nodes.Object_2.geometry.dispose();
-    //     }
-    //     if (starTexture) {
-    //       starTexture.dispose();
-    //     }
-    //   };
-    // }, [nodes, starTexture]); 
-    
-    // make colors closer to 0,0,0 be more reddish and colors further away be more blueish
+
     const color = new THREE.Color();
     for (let i = 0; i < positions.length; i += 3) {
       const x = positions[i];
@@ -52,36 +40,32 @@ export function Galaxy(props) {
     return [positions, colors];
   }, [nodes]);
 
-  // slowly rotate the galaxy
-
-  //  make particles glow
+;
   const MyGalaxy = () => {
- 
-  
-    // Rotate the galaxy to lay flat horizontally (rotate 90 degrees around X-axis)
     useEffect(() => {
       if (ref.current) {
-        ref.current.rotation.x = Math.PI / 2; // 90 degrees in radians
+        ref.current.rotation.x = Math.PI / 2; // Ложим горизонтально
       }
-    }, []);
-    let rotationAngle = 0;
-    // useFrame(({ clock }) => {
-    //   rotationAngle += 0.003; // Adjust this value for desired rotation speed
-
-    //   ref.current.rotation.z = rotationAngle;
-    // });
+      return () => {
+        if (nodes?.Object_2?.geometry) {
+          nodes.Object_2.geometry.dispose(); // Освобождаем геометрию
+        }
+        if (starTexture) {
+          starTexture.dispose(); // Освобождаем текстуру
+        }
+      };
+    }, [nodes, starTexture]);
+  
     useFrame(({ clock }) => {
-      const elapsedTime = clock.getElapsedTime(); // Total time in seconds since the scene started
-      ref.current.rotation.z = -(elapsedTime / 60) * 2 * Math.PI; // One full rotation every 60 seconds
+      const elapsedTime = clock.getElapsedTime();
+      ref.current.rotation.z = -(elapsedTime / 60) * 2 * Math.PI; // Вращаем галактику
     });
+  
+    
     return (
       <group {...props} dispose={null} ref={ref}>
-        <pointLight
-          position={[0,0,0]}
-          ref={galaxyCenterLightRef}
-          intensity={0.8}
-        />
-         <ambientLight intensity={0.3} /> 
+        <pointLight position={[0, 0, 0]} ref={galaxyCenterLightRef} intensity={0.8} />
+        <ambientLight intensity={0.3} />
         <Points scale={0.05} positions={positions} colors={colors}>
           <pointsMaterial
             map={starTexture}
@@ -104,6 +88,7 @@ export function Galaxy(props) {
       </group>
     );
   };
+  
   return (
     <Stack position="absolute" top={{lg:0,md:0,sm:0,xs:0}}   zIndex={10} width="100%" height={{lg:"100%",md:"100%",sm:"100%",xs:"100%"}}>
       <Canvas
@@ -130,7 +115,6 @@ export function Galaxy(props) {
 }
 
 useGLTF.preload("/space/galaxy.glb");
-
 
 
 
