@@ -52,8 +52,8 @@ const Footer = () => {
               <Stack>
                 <Typography
                   color="#fff"
-                  fontFamily="Montserrat"
-                  fontWeight={600}
+                  fontFamily="Roboto"
+                  fontWeight={500}
                   fontSize={{ lg: 44, md: 40, sm: 35, xs: 20 }}
                   ml={{ lg: -2, md: -1, sm: 0, xs: 0 }}
                   lineHeight={{
@@ -72,7 +72,7 @@ const Footer = () => {
               <Typography
                 color="#dddddd"
                 maxWidth={750}
-                fontFamily="Montserrat"
+                fontFamily="Roboto"
                 fontSize={{ lg: 13, md: 12, sm: 12, xs: 11 }}
                 mt={{ lg: "20px", md: "20px", sm: "10px", xs: "10px" }}
               >
@@ -106,7 +106,7 @@ const Footer = () => {
                   fontWeight: 500,
                   ...(isMobile ? { fontSize: 16 } : { fontSize: 20 }),
 
-                  fontFamily: "Montserrat",
+                  fontFamily: "Roboto",
                 }}
               >
                 (+993 12) 48 66 40
@@ -122,7 +122,7 @@ const Footer = () => {
                   fontWeight: 500,
                   ...(isMobile ? { fontSize: 16 } : { fontSize: 20 }),
 
-                  fontFamily: "Montserrat",
+                  fontFamily: "Roboto",
                 }}
               >
                 (+993) 62 04 21 89
@@ -138,7 +138,7 @@ const Footer = () => {
                   fontWeight: 500,
                   ...(isMobile ? { fontSize: 16 } : { fontSize: 20 }),
 
-                  fontFamily: "Montserrat",
+                  fontFamily: "Roboto",
                 }}
               >
                 info@alemtilsimat.com
@@ -154,7 +154,7 @@ const Footer = () => {
                   fontWeight: 500,
                   ...(isMobile ? { fontSize: 16 } : { fontSize: 20 }),
 
-                  fontFamily: "Montserrat",
+                  fontFamily: "Roboto",
                 }}
               >
                 www.alemtilsimat.com
@@ -183,7 +183,7 @@ const Footer = () => {
       <Typography
         textAlign="center"
         fontWeight={300}
-        fontFamily="Montserrat"
+        fontFamily="Roboto"
         fontSize={{ lg: 16, md: 15, sm: 14, xs: 12 }}
         color="#858585"
         p="8px 0"

@@ -56,7 +56,7 @@ const Contacts = () => {
         <Stack width={{ lg: 455, md: 440, sm: 400, xs: "100%" }}>
           <Typography
             color="#fff"
-            fontFamily="Montserrat"
+            fontFamily="Roboto"
             fontWeight={600}
             fontSize={{ lg: 40, md: 34, sm: 28, xs: 25 }}
             lineHeight={{
@@ -73,7 +73,7 @@ const Contacts = () => {
           <Typography
             color="#DDDDDD"
             mb="40px"
-            fontFamily="Montserrat"
+            fontFamily="Roboto"
             fontWeight={400}
             fontSize={{ lg: 13, md: 13, sm: 13, xs: 12 }}
             textAlign="center"
@@ -82,7 +82,7 @@ const Contacts = () => {
           </Typography>
           <Typography
             color="#fff"
-            fontFamily="Montserrat"
+            fontFamily="Roboto"
             fontWeight={600}
             fontSize={{ lg: 24, md: 20, sm: 18, xs: 16 }}
             className="main-title"
@@ -93,7 +93,7 @@ const Contacts = () => {
           <Typography
             color="#DDDDDD"
             mb="40px"
-            fontFamily="Montserrat"
+            fontFamily="Roboto"
             fontWeight={400}
             fontSize={{ lg: 13, md: 13, sm: 13, xs: 12 }}
             textAlign="center"
@@ -102,7 +102,7 @@ const Contacts = () => {
           </Typography>
           <Typography
             color="#fff"
-            fontFamily="Montserrat"
+            fontFamily="Roboto"
             fontWeight={600}
             fontSize={{ lg: 24, md: 20, sm: 18, xs: 16 }}
             className="main-title"
@@ -112,14 +112,18 @@ const Contacts = () => {
           </Typography>
           <Typography
             color="#DDDDDD"
-            fontFamily="Montserrat"
+            fontFamily="Roboto"
             fontWeight={400}
             fontSize={{ lg: 13, md: 13, sm: 13, xs: 12 }}
             textAlign="center"
           >
             <a
               href="tel: (+993 12) 48 66 40"
-              style={{ textDecoration: "none", color: "#DDDDDD" }}
+              style={{
+                textDecoration: "none",
+                color: "#DDDDDD",
+                fontFamily: "Roboto",
+              }}
             >
               {t("officeNumber")}
             </a>
@@ -127,21 +131,25 @@ const Contacts = () => {
           <Typography
             color="#DDDDDD"
             mb="40px"
-            fontFamily="Montserrat"
+            fontFamily="Roboto"
             fontWeight={400}
             fontSize={{ lg: 13, md: 13, sm: 13, xs: 12 }}
             textAlign="center"
           >
             <a
               href="tel: +99362042189"
-              style={{ textDecoration: "none", color: "#DDDDDD" }}
+              style={{
+                textDecoration: "none",
+                color: "#DDDDDD",
+                fontFamily: "Roboto",
+              }}
             >
               {t("mobile")}
             </a>
           </Typography>
           <Typography
             color="#fff"
-            fontFamily="Montserrat"
+            fontFamily="Roboto"
             fontWeight={600}
             fontSize={{ lg: 24, md: 20, sm: 18, xs: 16 }}
             className="main-title"
@@ -152,14 +160,18 @@ const Contacts = () => {
           <Typography
             color="#DDDDDD"
             mb="30px"
-            fontFamily="Montserrat"
+            fontFamily="Roboto"
             fontWeight={400}
             fontSize={{ lg: 13, md: 13, sm: 13, xs: 12 }}
             textAlign="center"
           >
             <a
               href="mailto:info@alemtilsimat.com"
-              style={{ textDecoration: "none", color: "#DDDDDD" }}
+              style={{
+                textDecoration: "none",
+                color: "#DDDDDD",
+                fontFamily: "Roboto",
+              }}
             >
               info@alemtilsimat.com
             </a>
@@ -182,7 +194,7 @@ const Contacts = () => {
         >
           <Typography
             color="#fff"
-            fontFamily="Montserrat"
+            fontFamily="Roboto"
             fontWeight={600}
             fontSize={{ lg: 40, md: 34, sm: 28, xs: 25 }}
             lineHeight={{

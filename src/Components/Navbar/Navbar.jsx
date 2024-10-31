@@ -47,7 +47,7 @@ const Navbar = () => {
       position="sticky"
       top="0"
       width="100%"
-      zIndex="1000"
+      zIndex="100000"
       sx={{
         ...(scrolled
           ? {
@@ -89,9 +89,9 @@ const Navbar = () => {
             <Stack>
               <Typography
                 color="#fff"
-                fontFamily="Montserrat"
-                fontWeight={600}
-                fontSize={16}
+                fontFamily="Roboto"
+                fontWeight={400}
+                fontSize={18}
                 ml={-2}
                 lineHeight={{
                   lg: "76px",
@@ -99,7 +99,7 @@ const Navbar = () => {
                   sm: "46px",
                   xs: "36px",
                 }}
-                className="main-title"
+                // className="main-title"
               >
                 Älem Tilsimat
               </Typography>
@@ -201,7 +201,7 @@ const Navbar = () => {
             <Stack>
               <Typography
                 color="#fff"
-                fontFamily="Montserrat"
+                fontFamily="Roboto"
                 fontWeight={600}
                 fontSize={16}
                 ml={-2}

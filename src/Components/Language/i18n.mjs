@@ -21,7 +21,7 @@ export const resources = {
       send: "Send",
       wish: ' Hope you`re happy with our service! Text "Feedback" to share your experience.',
       homeTitle:
-        "Development and implementation of IT projects of any complexity",
+        "Development and of IT projects of any complexity",
       explore: "Explore our work",
       about: "About us",
       aboutText:

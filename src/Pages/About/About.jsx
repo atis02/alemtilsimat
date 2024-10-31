@@ -12,7 +12,10 @@ const About = () => {
         mt: "50px",
         pb: "50px",
         borderBottom: "1px solid gray",
+        // marginTop: "100vh",
+        padding: "20px",
       }}
+      id="targetSection"
     >
       <Stack
         direction={{ lg: "row", md: "row", sm: "column", xs: "column" }}
@@ -40,8 +43,8 @@ const About = () => {
         <Stack>
           <Typography
             color="#00E0FF"
-            fontFamily="Montserrat"
-            fontWeight={600}
+            fontFamily="Roboto"
+            fontWeight={500}
             fontSize={{ lg: 50, md: 45, sm: 40, xs: 30 }}
             lineHeight={{
               lg: "76px",
@@ -58,7 +61,7 @@ const About = () => {
             color="#DDDDDDDD"
             fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
             lineHeight="27px"
-            fontFamily="Montserrat"
+            fontFamily="Roboto"
             fontWeight={400}
             textAlign="justify"
           >

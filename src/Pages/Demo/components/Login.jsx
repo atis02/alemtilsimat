@@ -77,7 +77,7 @@ const Login = () => {
         >
           <Stack spacing="20px" alignItems="center">
             <Typography
-              fontFamily="Poppins"
+              fontFamily="Roboto"
               fontSize={{ lg: 50, md: 40, sm: 35, xs: 35 }}
               fontWeight={400}
               color="#fff"

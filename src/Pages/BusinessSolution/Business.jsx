@@ -83,7 +83,7 @@ const Business = () => {
             <Typography
               color="#fff"
               fontWeight={500}
-              fontFamily="Montserrat"
+              fontFamily="Roboto"
               fontSize={{ lg: 20, md: 18, sm: 18, xs: 16 }}
               mb="10px"
               mt={{ lg: 10, md: 10, sm: 10, xs: 4 }}
@@ -93,7 +93,7 @@ const Business = () => {
             <Typography
               color="#DDDDDD"
               fontWeight={300}
-              fontFamily="Montserrat"
+              fontFamily="Roboto"
               fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
               textAlign="justify"
             >
@@ -116,8 +116,8 @@ const Business = () => {
       <Stack>
         <Stack>
           <Typography
-            fontFamily="Montserrat"
-            fontWeight={600}
+            fontFamily="Roboto"
+            fontWeight={6500}
             fontSize={{ lg: 50, md: 45, sm: 40, xs: 30 }}
             lineHeight={{
               lg: "76px",
@@ -156,7 +156,7 @@ const Business = () => {
               color="#DDDDDDDD"
               fontSize={{ lg: 16, md: 15, sm: 15, xs: 14 }}
               lineHeight="27px"
-              fontFamily="Montserrat"
+              fontFamily="Roboto"
               width={{ lg: "61%", md: "60%", sm: "100%", xs: "100%" }}
               fontWeight={400}
               mb={{ lg: 3, md: 3, sm: 2, xs: 0 }}

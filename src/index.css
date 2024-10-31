@@ -6,7 +6,10 @@
   /* background-color: #000; */
   /* background-color: #04101c; */
 }
-
+.none-select ::selection {
+  background-color: transparent;
+  color: #fff;
+}
 ::selection{
   background-color:rgba(0,224,255,1);
   color: #04101c;
@@ -44,11 +47,12 @@ input:-moz-autofill {
   color: #ffffff;
   font-size: 20px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   height: 34px;
   align-items: center;
   transition: all ease 0.7s;
   display: flex;
+  font-family: 'Roboto';
   gap: 6px;
 }
 .nav-link:hover{
@@ -59,6 +63,7 @@ input:-moz-autofill {
   color: #ffffff;
   font-size: 20px;
   text-decoration: none;
+  font-family: 'Roboto';
   font-weight: 500;
   height: 34px;
   align-items: center;
@@ -66,13 +71,11 @@ input:-moz-autofill {
 }
 .active{
   color: #0cfefc;
-  border-bottom: 1.5px solid #0cfefc ;
+  /* border-bottom: 1.5px solid #0cfefc ; */
   transition: all ease 0.4s;
   font-weight: 600;
 }
-.active .tocka{
-  display: flex;
-}
+
 
 .button {
   padding:0 1rem;
@@ -161,3 +164,32 @@ font-size: 20px;
  height: 80%;
  filter: blur(.7rem)
 };
+.down-button {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.down-button .arrow {
+  font-size: 24px;
+  /* Adjust size as needed */
+  color: #333;
+  /* Set your desired color */
+  animation: bounce 2s infinite;
+  /* Apply bounce animation */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+    /* Start and end position */
+  }
+
+  50% {
+    transform: translateY(10px);
+    /* Midway position (bouncing down) */
+  }
+}

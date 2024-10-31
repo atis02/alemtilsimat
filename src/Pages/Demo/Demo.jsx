@@ -55,7 +55,7 @@ const Demo = () => {
               <Stack>
                 <Typography
                   color="#fff"
-                  fontFamily="Montserrat"
+                  fontFamily="Roboto"
                   fontWeight={500}
                   fontSize={{ lg: 115, md: 100, sm: 70, xs: 50 }}
                   ml={{ lg: -10, md: -5, sm: -4, xs: -2 }}
@@ -82,7 +82,7 @@ const Demo = () => {
                   color: "#fff",
                   fontSize: { lg: 40, md: 37, sm: 30, xs: 20 },
                   fontWeight: 500,
-                  fontFamily: "Montserrat",
+                  fontFamily: "Roboto",
                   textTransform: "revert",
                   borderBottom: "1px solid #fff",
 
@@ -101,7 +101,7 @@ const Demo = () => {
                   color: "#fff",
                   fontSize: { lg: 40, md: 37, sm: 30, xs: 20 },
                   fontWeight: 500,
-                  fontFamily: "Montserrat",
+                  fontFamily: "Roboto",
                   borderBottom: "1px solid #fff",
                   textTransform: "revert",
                   ...(website == "1"
@@ -122,7 +122,7 @@ const Demo = () => {
                   color: "#fff",
                   fontSize: { lg: 40, md: 37, sm: 30, xs: 20 },
                   fontWeight: 500,
-                  fontFamily: "Montserrat",
+                  fontFamily: "Roboto",
                   textTransform: "revert",
                   ...(website == "2"
                     ? { borderBottom: "3px solid #00E0FF " }
